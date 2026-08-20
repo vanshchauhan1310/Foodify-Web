@@ -1,0 +1,20 @@
+{
+  "rewrites": [
+    { "source": "/", "destination": "/Index.html" },
+    { "source": "/about", "destination": "/About.html" },
+    { "source": "/contact", "destination": "/Contact.html" },
+    { "source": "/careers", "destination": "/Careers.html" },
+    { "source": "/case-studies", "destination": "/CaseStudies.html" },
+    { "source": "/pricing", "destination": "/Pricing.html" },
+    { "source": "/cafeteria-managed", "destination": "/CafeteriaManaged.html" },
+    { "source": "/dining-os", "destination": "/FoodifyApp.html" },
+    { "source": "/events-gifting", "destination": "/EventGiftingService.html" },
+    { "source": "/pantry-services", "destination": "/PantryService.html" },
+    { "source": "/corporate-sector", "destination": "/CoporateSector.html" },
+    { "source": "/education-sector", "destination": "/EducationSector.html" },
+    { "source": "/healthcare-sector", "destination": "/HealthcareSector.html" },
+    { "source": "/privacy-policy", "destination": "/PrivacyPolicy.html" },
+    { "source": "/terms-of-service", "destination": "/TermsOfService.html" },
+    { "source": "/sustainability", "destination": "/Sustainability.html" }
+  ]
+}
