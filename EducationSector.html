@@ -1,0 +1,631 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Smart Dining for Smarter Campuses | Foodify</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Geist:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-secondary-container": "#5f6161",
+                      "on-tertiary": "#ffffff",
+                      "on-secondary": "#ffffff",
+                      "on-error": "#ffffff",
+                      "on-surface": "#1b1c1c",
+                      "on-error-container": "#93000a",
+                      "tertiary": "#000000",
+                      "primary-container": "#1c1b1c",
+                      "secondary-fixed-dim": "#c6c7c6",
+                      "slate-muted": "#E5E5E1",
+                      "on-secondary-fixed-variant": "#454747",
+                      "on-tertiary-fixed-variant": "#285000",
+                      "on-surface-variant": "#46464a",
+                      "surface-dim": "#dbdad9",
+                      "secondary": "#5d5f5e",
+                      "on-tertiary-fixed": "#0d2000",
+                      "surface-bright": "#fbf9f8",
+                      "on-primary-fixed": "#1c1b1c",
+                      "cream-soft": "#F4F4F0",
+                      "secondary-container": "#dcdddc",
+                      "action-lime": "#94FA33",
+                      "background": "#fbf9f8",
+                      "primary-fixed": "#e5e2e3",
+                      "on-primary": "#ffffff",
+                      "inverse-on-surface": "#f2f0f0",
+                      "secondary-fixed": "#e2e2e2",
+                      "outline": "#77777b",
+                      "surface": "#fbf9f8",
+                      "on-primary-container": "#858384",
+                      "surface-container-highest": "#e4e2e2",
+                      "surface-container-low": "#f5f3f3",
+                      "primary": "#000000",
+                      "error": "#ba1a1a",
+                      "on-secondary-fixed": "#1a1c1c",
+                      "on-tertiary-container": "#509400",
+                      "tertiary-fixed-dim": "#7bde08",
+                      "surface-variant": "#e4e2e2",
+                      "surface-container": "#efeded",
+                      "surface-container-high": "#e9e8e7",
+                      "forest-deep": "#0F1A0F",
+                      "surface-tint": "#5f5e5f",
+                      "inverse-surface": "#303031",
+                      "on-primary-fixed-variant": "#474647",
+                      "paper-surface": "#F9F9F8",
+                      "error-container": "#ffdad6",
+                      "primary-fixed-dim": "#c8c6c7",
+                      "inverse-primary": "#c8c6c7",
+                      "surface-container-lowest": "#ffffff",
+                      "tertiary-fixed": "#96fc35",
+                      "outline-variant": "#c7c6ca",
+                      "tertiary-container": "#0d2000",
+                      "on-background": "#1b1c1c"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-tablet": "32px",
+                      "unit": "4px",
+                      "margin-mobile": "16px",
+                      "container-max": "1440px",
+                      "margin-desktop": "64px",
+                      "gutter": "24px"
+              },
+              "fontFamily": {
+                      "mono-sm": [
+                              "Geist"
+                      ],
+                      "headline-lg": [
+                              "Geist"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "headline-lg-mobile": [
+                              "Geist"
+                      ],
+                      "display-xl": [
+                              "Geist"
+                      ],
+                      "label-md": [
+                              "Geist"
+                      ],
+                      "display-lg": [
+                              "Geist"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "mono-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0em",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-md": [
+                              "15px",
+                              {
+                                      "lineHeight": "24px",
+                                      "letterSpacing": "0em",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "display-xl": [
+                              "72px",
+                              {
+                                      "lineHeight": "72px",
+                                      "letterSpacing": "-0.04em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "label-md": [
+                              "13px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.02em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "display-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "52px",
+                                      "letterSpacing": "-0.03em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+        }
+        .pattern-bg {
+            background-image: radial-gradient(#e5e5e1 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+    </style>
+</head>
+<body class="bg-paper-surface text-on-surface font-body-md text-body-md antialiased overflow-x-hidden selection:bg-action-lime selection:text-primary">
+<!-- Site Header (Shared) -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/30 transition-all duration-300">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20 max-w-container-max mx-auto">
+<a class="flex items-center gap-3 transition-transform hover:scale-105 active:scale-95 cursor-pointer" href="Index.html">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="restaurant">restaurant</span>
+<span class="font-display-lg text-headline-lg-mobile md:text-headline-lg font-bold text-primary tracking-tighter">Foodify</span>
+</a>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="text-secondary hover:text-primary transition-colors font-label-md text-label-md" href="Index.html#services">Services</a>
+<a class="text-primary font-bold border-b-2 border-action-lime py-1 font-label-md text-label-md" href="Index.html#sectors">Sectors</a>
+<a class="text-secondary hover:text-primary transition-colors font-label-md text-label-md" href="FoodifyApp.html">Dining OS</a>
+<a class="text-secondary hover:text-primary transition-colors font-label-md text-label-md" href="About.html">About</a>
+</nav>
+<a class="bg-primary text-on-primary px-6 py-2 rounded-full font-label-md text-label-md hover:bg-forest-deep transition-colors hidden md:block" href="Contact.html">Get in Touch</a>
+<button class="md:hidden text-primary" id="menu-toggle">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+<div class="md:hidden hidden bg-surface/95 backdrop-blur-md border-t border-outline-variant/30 px-margin-mobile py-4" id="mobile-menu">
+<nav class="flex flex-col gap-2">
+<a class="px-4 py-3 rounded-xl font-label-md text-label-md text-secondary hover:bg-surface-container transition-colors" href="Index.html#services">Services</a>
+<a class="px-4 py-3 rounded-xl font-label-md text-label-md text-primary font-bold hover:bg-surface-container transition-colors" href="Index.html#sectors">Sectors</a>
+<a class="px-4 py-3 rounded-xl font-label-md text-label-md text-secondary hover:bg-surface-container transition-colors" href="FoodifyApp.html">Dining OS</a>
+<a class="px-4 py-3 rounded-xl font-label-md text-label-md text-secondary hover:bg-surface-container transition-colors" href="About.html">About</a>
+<a class="mt-2 bg-primary text-on-primary text-center px-6 py-3 rounded-full font-label-md text-label-md" href="Contact.html">Get in Touch</a>
+</nav>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative pt-24 pb-32 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto overflow-hidden">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="z-10 relative">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cream-soft border border-slate-muted mb-8">
+<div class="w-2 h-2 rounded-full bg-action-lime"></div>
+<span class="font-mono-sm text-mono-sm uppercase tracking-wider text-secondary">Education Sector</span>
+</div>
+<h1 class="font-display-lg md:font-display-xl text-display-lg md:text-display-xl text-primary mb-6 leading-tight">
+                        Smart Dining for <br><span class="text-action-lime stroke-text relative inline-block">Smarter Campuses.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-secondary mb-10 max-w-lg">
+                        Elevate the student experience with data-driven menus, high-throughput service models, and nutrition-forward programs designed for the modern educational institution.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-DEFAULT font-label-md text-label-md hover:opacity-90 transition-opacity flex items-center gap-2">
+                            Build Your Program
+                            <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+<button class="bg-white border border-slate-muted text-primary px-8 py-4 rounded-DEFAULT font-label-md text-label-md hover:bg-surface-container transition-colors">
+                            View Case Studies
+                        </button>
+</div>
+</div>
+<div class="relative w-full h-[600px] rounded-2xl overflow-hidden">
+<div class="absolute inset-0 bg-primary/5 z-10 rounded-2xl"></div>
+<img class="w-full h-full object-cover rounded-2xl" data-alt="A bright, high-key, modern university cafeteria setting. Students in casual but neat attire are interacting with a sleek, minimalist food station. The lighting is bright and natural, emphasizing a clean, light-mode aesthetic. The scene uses a sophisticated palette of crisp whites, soft greys, and vibrant pops of fresh green from healthy food displays. The mood is energetic, intelligent, and focused on premium campus dining." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBElmWDoX4g_YOVHo7OJsyZUsI5L2JvCFJUeiRq1pvhYYIVciaAYjXKobBCAxzSfTmzC6g021WZe-5LbKw235-J7STo0rAT-fp7qbuSBAuq5gOqHAxYQmkiMpKwxqggprvrsziUxtezRIHXOW4NsFh-xUoP3HQsNM3XRkLItly784KyJOmRWVbRpBKPkM2CtuonwCjzdAw_Ho3hDK3j_sIy28Oj_qPpih_4NqFGXHIrGVUpGsWqcR3H">
+<!-- Floating Cards -->
+<div class="absolute top-8 -left-8 md:left-8 z-20 glass-panel p-4 rounded-xl flex items-center gap-4 animate-bounce" style="animation-duration: 3s;">
+<div class="bg-action-lime/20 p-2 rounded-lg text-action-lime">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">eco</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-primary">Healthy Meals</p>
+<p class="font-mono-sm text-mono-sm text-secondary">Locally sourced</p>
+</div>
+</div>
+<div class="absolute bottom-12 -right-4 md:right-8 z-20 glass-panel p-4 rounded-xl flex flex-col gap-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-action-lime" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<span class="font-headline-lg text-headline-lg text-primary">94%</span>
+</div>
+<p class="font-label-md text-label-md text-secondary">Student Satisfaction</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Challenges Section (Bento Grid) -->
+<section class="py-32 bg-surface-container-low px-margin-mobile md:px-margin-desktop">
+<div class="max-w-container-max mx-auto">
+<div class="mb-16">
+<h2 class="font-display-lg text-display-lg text-primary mb-4">The Campus Dining Challenge</h2>
+<p class="font-body-lg text-body-lg text-secondary max-w-2xl">Modern campuses demand more than just sustenance. They require complex, high-volume logistics paired with hyper-personalized nutrition.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[240px]">
+<!-- Card 1: Spans 2 columns -->
+<div class="md:col-span-2 bg-white rounded-2xl border border-slate-muted p-8 flex flex-col justify-between hover:-translate-y-1 transition-transform shadow-sm hover:shadow-md relative overflow-hidden group">
+<div class="z-10">
+<div class="w-12 h-12 rounded-full bg-cream-soft flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary">restaurant_menu</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-primary mb-2">Diverse Preferences</h3>
+<p class="font-body-md text-body-md text-secondary max-w-md">Catering to vegan, kosher, halal, and allergen-free diets simultaneously without compromising service speed or quality.</p>
+</div>
+<!-- Micro-visualization background pattern -->
+<div class="absolute -bottom-10 -right-10 w-64 h-64 bg-action-lime/10 rounded-full blur-3xl group-hover:bg-action-lime/20 transition-colors"></div>
+</div>
+<!-- Card 2 -->
+<div class="bg-primary text-on-primary rounded-2xl p-8 flex flex-col justify-between hover:-translate-y-1 transition-transform shadow-sm hover:shadow-md">
+<div>
+<div class="w-12 h-12 rounded-full bg-on-surface-variant flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-action-lime">nutrition</span>
+</div>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile mb-2">Nutrition</h3>
+<p class="font-body-md text-body-md text-surface-dim">Ensuring mental and physical peak performance through balanced macronutrients.</p>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-white rounded-2xl border border-slate-muted p-8 flex flex-col justify-between hover:-translate-y-1 transition-transform shadow-sm hover:shadow-md">
+<div>
+<div class="w-12 h-12 rounded-full bg-cream-soft flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary">groups</span>
+</div>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary mb-2">High Volume</h3>
+<p class="font-body-md text-body-md text-secondary">Managing surge periods between classes efficiently.</p>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-white rounded-2xl border border-slate-muted p-8 flex flex-col justify-between hover:-translate-y-1 transition-transform shadow-sm hover:shadow-md">
+<div>
+<div class="w-12 h-12 rounded-full bg-cream-soft flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary">map</span>
+</div>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary mb-2">Multiple Areas</h3>
+<p class="font-body-md text-body-md text-secondary">Coordinating logistics across sprawling campus real estate.</p>
+</div>
+</div>
+<!-- Card 5 -->
+<div class="bg-white rounded-2xl border border-slate-muted p-8 flex flex-col justify-between hover:-translate-y-1 transition-transform shadow-sm hover:shadow-md relative overflow-hidden">
+<div class="absolute top-0 right-0 w-2 h-full bg-error"></div>
+<div>
+<div class="w-12 h-12 rounded-full bg-error-container flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-error">health_and_safety</span>
+</div>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary mb-2">Safety Protocols</h3>
+<p class="font-body-md text-body-md text-secondary">Maintaining rigorous food safety and hygiene standards.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Workflow Section -->
+<section class="py-32 px-margin-mobile md:px-margin-desktop border-b border-slate-muted">
+<div class="max-w-container-max mx-auto">
+<div class="text-center mb-20">
+<h2 class="font-display-lg text-display-lg text-primary mb-4">Our Deployment Process</h2>
+<p class="font-body-lg text-body-lg text-secondary mx-auto max-w-2xl">A surgical, data-backed approach to transforming your campus dining ecosystem.</p>
+</div>
+<div class="flex flex-col md:flex-row justify-between relative">
+<!-- Connecting Line -->
+<div class="hidden md:block absolute top-1/2 left-0 w-full h-[2px] bg-slate-muted -translate-y-1/2 z-0"></div>
+<!-- Steps -->
+<div class="flex-1 relative z-10 flex flex-col items-center text-center px-4 mb-12 md:mb-0">
+<div class="w-16 h-16 rounded-full bg-paper-surface border-2 border-action-lime flex items-center justify-center mb-6 font-headline-lg text-headline-lg text-primary bg-white">1</div>
+<h4 class="font-label-md text-label-md text-primary mb-2 uppercase tracking-wide">Understand Campus</h4>
+<p class="font-body-md text-body-md text-secondary text-sm">Deep demographic &amp; spatial analysis.</p>
+</div>
+<div class="flex-1 relative z-10 flex flex-col items-center text-center px-4 mb-12 md:mb-0">
+<div class="w-16 h-16 rounded-full bg-paper-surface border-2 border-slate-muted flex items-center justify-center mb-6 font-headline-lg text-headline-lg text-secondary bg-white">2</div>
+<h4 class="font-label-md text-label-md text-primary mb-2 uppercase tracking-wide">Design Program</h4>
+<p class="font-body-md text-body-md text-secondary text-sm">Menu engineering &amp; layout planning.</p>
+</div>
+<div class="flex-1 relative z-10 flex flex-col items-center text-center px-4 mb-12 md:mb-0">
+<div class="w-16 h-16 rounded-full bg-paper-surface border-2 border-slate-muted flex items-center justify-center mb-6 font-headline-lg text-headline-lg text-secondary bg-white">3</div>
+<h4 class="font-label-md text-label-md text-primary mb-2 uppercase tracking-wide">Manage Ops</h4>
+<p class="font-body-md text-body-md text-secondary text-sm">Hiring, training, and supply chain.</p>
+</div>
+<div class="flex-1 relative z-10 flex flex-col items-center text-center px-4 mb-12 md:mb-0">
+<div class="w-16 h-16 rounded-full bg-paper-surface border-2 border-slate-muted flex items-center justify-center mb-6 font-headline-lg text-headline-lg text-secondary bg-white">4</div>
+<h4 class="font-label-md text-label-md text-primary mb-2 uppercase tracking-wide">Digitize Dining</h4>
+<p class="font-body-md text-body-md text-secondary text-sm">App rollout &amp; POS integration.</p>
+</div>
+<div class="flex-1 relative z-10 flex flex-col items-center text-center px-4">
+<div class="w-16 h-16 rounded-full bg-paper-surface border-2 border-slate-muted flex items-center justify-center mb-6 font-headline-lg text-headline-lg text-secondary bg-white">5</div>
+<h4 class="font-label-md text-label-md text-primary mb-2 uppercase tracking-wide">Improve</h4>
+<p class="font-body-md text-body-md text-secondary text-sm">Continuous data-driven refinement.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Solutions Section -->
+<section class="py-32 bg-paper-surface px-margin-mobile md:px-margin-desktop">
+<div class="max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+<div>
+<h2 class="font-display-lg text-display-lg text-primary mb-4">Comprehensive Solutions</h2>
+<p class="font-body-lg text-body-lg text-secondary max-w-xl">From main dining halls to decentralized micro-markets, we cover every aspect of student sustenance.</p>
+</div>
+<button class="bg-white border border-slate-muted text-primary px-6 py-3 rounded-DEFAULT font-label-md text-label-md hover:bg-surface-container transition-colors whitespace-nowrap">
+                        View All Capabilities
+                    </button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Sol 1 -->
+<div class="group rounded-2xl overflow-hidden bg-white border border-slate-muted hover:shadow-lg transition-all duration-300">
+<div class="h-48 relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A modern, high-contrast image of a bustling student dining hall. The setting is bright and intelligent, featuring sleek white counters, minimalist black chairs, and large windows letting in natural light. Students are enjoying diverse, vibrant meals. The aesthetic is clean, premium, and focused on high-volume efficiency with an editorial feel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCUKTYWHbEbnKZi-S0lzliOarxR-lMT1VNW-KvfII3Mwpfdh8O_eoAJNRCeHXiFDF8mDkZGDIyObgj2x9JUpcXREF06Ew7D9Paix5hi50_WQ3M4lvWN1LSf6nHdSKv8b_-AvhKDbmk4OyK55jYaJa6p-4QQuXX8hw7WfHN5HaaZTFDFBj--ZVdfQAZX_6l3Luexc_aNHfW2XNxQFGRH8tD0tBm8NO7_vumnhKZm6ySvKDTU6coyF06">
+</div>
+<div class="p-6">
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary mb-2">Student Dining</h3>
+<p class="font-body-md text-body-md text-secondary">Core cafeteria management focusing on throughput, variety, and nutritional balance for daily boarders.</p>
+</div>
+</div>
+<!-- Sol 2 -->
+<div class="group rounded-2xl overflow-hidden bg-white border border-slate-muted hover:shadow-lg transition-all duration-300">
+<div class="h-48 relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A sophisticated campus food court featuring multiple distinct, minimalist food stalls. The design uses deep charcoal accents against off-white surfaces, resembling a high-end urban food hall. Neon signs with clean typography mark different cuisines. The lighting is crisp, highlighting the fresh ingredients and professional culinary atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGaFSleo1o8grJYt5GD7QXDTRCUv3qTKD_HpQgGN4w30_bHuw9EOLJSEGJ_wLnjANohWYleKowacmUvWYxYCsgkS4DmQKEUYPekW97M1chzjIrrF7BZigNLbzD-LvIgSsEc31TemhIEBCjwDtnR1X7OPmF4GTTsFntxybCNhKigduZBJ6o-2s-x4o_fJh3FJOL9wBZymfa46Gi89I5YeFSWbfgS3pHMkdDXLxtzfLZCzVVIvnsJVm3">
+</div>
+<div class="p-6">
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary mb-2">Campus Food Courts</h3>
+<p class="font-body-md text-body-md text-secondary">Multi-concept retail environments offering recognizable brands and diverse culinary choices.</p>
+</div>
+</div>
+<!-- Sol 3 -->
+<div class="group rounded-2xl overflow-hidden bg-white border border-slate-muted hover:shadow-lg transition-all duration-300">
+<div class="h-48 relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="An intimate, premium hostel dining setting. The room features warm wood accents contrasting with stark white tables and deep black pendant lights. The atmosphere is cozy yet modern, suggesting a residential but high-quality dining experience. Freshly prepared, comforting food is visible on the tables under warm, focused lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGcV7Y8H1hgBmtl5cdVSksr-VKsGeYUlJqc5qO-oR837FnYfppGnZcMeq-qi55PfBDprYY7uYeUSzM8cbF3YX93-AZ2qnJfHdAkm-8zj5QvAEFZ0rxUKeyRHq1meQsrfdiRr9vQVd8Q9OiP3yr2TtHSnnmhd0HVKarlh_p5qMcY4PSns63R5PoPMlY79Ebk-RllCIOHX7_wSkMi6aQMrhlRvtuh_iH-HMOFjhwnj-Q47ElfBjz2VuN">
+</div>
+<div class="p-6">
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary mb-2">Hostel Dining</h3>
+<p class="font-body-md text-body-md text-secondary">Comforting, residential-style dining programs focused on community building and 24/7 accessibility.</p>
+</div>
+</div>
+<!-- Sol 4 -->
+<div class="group rounded-2xl overflow-hidden bg-white border border-slate-muted hover:shadow-lg transition-all duration-300">
+<div class="h-48 relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A striking macro shot of a fresh, healthy salad bowl on a pristine white surface. The ingredients are vibrant: bright greens, deep reds, and a pop of action-lime green from a garnish. The lighting is surgical and high-contrast, emphasizing the freshness, precision, and nutritional quality of the food in a modern setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3y2DzXu5IKu9KM5yYcqFTJG9krWqtnCKiPELt2MM_NY9aXcvYHi4Ever1ZIG7GVo7buBGkMhIDJpYwF4p_PijvLz3OmKkPdgb26Zy_eBwJeNPCoHDKmbXlplyCEJHQTFJJWRt8c6fLYpzlJqbLmoSy8mKlllpF5exz-lwIJrR72r5GTXuXjvAlbZuWc9ehyVfE7-9UhEjiVaCvKvTPoM7zAoI2Eh3I3rfehkwnJLwgPuX_kfekHWT">
+</div>
+<div class="p-6">
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary mb-2">Healthy Food Initiatives</h3>
+<p class="font-body-md text-body-md text-secondary">Specialized performance-nutrition menus designed with campus dietitians to fuel academic success.</p>
+</div>
+</div>
+<!-- Sol 5 -->
+<div class="group rounded-2xl overflow-hidden bg-white border border-slate-muted hover:shadow-lg transition-all duration-300">
+<div class="h-48 relative overflow-hidden bg-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-action-lime text-6xl" style="font-variation-settings: 'FILL' 1;">smartphone</span>
+</div>
+<div class="p-6">
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary mb-2">Digital Vending</h3>
+<p class="font-body-md text-body-md text-secondary">Smart fridges and autonomous micro-markets providing 24/7 access to fresh, healthy options.</p>
+</div>
+</div>
+<!-- Sol 6 -->
+<div class="group rounded-2xl overflow-hidden bg-white border border-slate-muted hover:shadow-lg transition-all duration-300">
+<div class="h-48 relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="An energetic outdoor campus event catering setup. White tents and sleek black serving stations stand out against a green campus lawn. The scene is captured with bright, light-mode aesthetics. Students are gathered around, interacting with professional catering staff. The overall mood is vibrant, high-quality, and seamlessly executed." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUpNf4XagqghPJNrBhXhb9KIZf160U6lZWLg906Ue4tUhx0IiUaEmbt4bVniKrQoEIC62AqD5pgfz0kse_DijEh9fiCpNPcY1eZRtFEdgw_pmH6txGSc7o-r7FmrAJnGgPVUhL-aeIGXoDiVoXfEsiNgn4UUDBQ0z_6hTCF2faa3FRl9W51dxjBtJgvuujJACh9Ah5nHt3DpK5lp5ZIIlmd0Im6D9uXaCJZoDMUEY-9SmO2IFFqIHd">
+</div>
+<div class="p-6">
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary mb-2">Campus Events</h3>
+<p class="font-body-md text-body-md text-secondary">High-end catering services for graduation ceremonies, alumni galas, and departmental gatherings.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Student Experience (App Mockup) -->
+<section class="py-32 bg-primary-container text-on-primary pattern-bg px-margin-mobile md:px-margin-desktop overflow-hidden">
+<div class="max-w-container-max mx-auto">
+<div class="text-center mb-20">
+<h2 class="font-display-lg text-display-lg text-white mb-4">Frictionless Experience</h2>
+<p class="font-body-lg text-body-lg text-secondary-fixed-dim mx-auto max-w-2xl">Empower students with our bespoke mobile platform, reducing wait times and increasing engagement.</p>
+</div>
+<div class="flex flex-col md:flex-row justify-center items-center gap-12 relative">
+<!-- Decor line -->
+<div class="hidden md:block absolute top-1/2 left-[10%] right-[10%] h-[1px] bg-outline-variant/30 z-0 border-dashed border-b border-outline-variant/30"></div>
+<!-- Screen 1 -->
+<div class="relative z-10 w-[280px] h-[560px] bg-black rounded-[2.5rem] border-[6px] border-surface-variant p-4 shadow-2xl flex flex-col transform md:-rotate-6 hover:rotate-0 transition-transform duration-500">
+<div class="w-32 h-6 bg-black absolute top-0 left-1/2 -translate-x-1/2 rounded-b-xl z-20"></div>
+<div class="flex-1 bg-white rounded-2xl overflow-hidden flex flex-col">
+<div class="p-4 bg-paper-surface border-b border-slate-muted">
+<h4 class="font-headline-lg-mobile text-headline-lg-mobile text-primary">Today's Menu</h4>
+</div>
+<div class="p-4 flex-1 overflow-y-auto space-y-4">
+<div class="h-24 bg-cream-soft rounded-lg animate-pulse"></div>
+<div class="h-24 bg-cream-soft rounded-lg animate-pulse"></div>
+<div class="h-24 bg-cream-soft rounded-lg animate-pulse"></div>
+</div>
+</div>
+<div class="absolute -bottom-8 left-1/2 -translate-x-1/2 font-mono-sm text-mono-sm text-action-lime bg-primary px-4 py-1 rounded-full whitespace-nowrap">Step 1: Browse Menu</div>
+</div>
+<!-- Screen 2 -->
+<div class="relative z-10 w-[280px] h-[560px] bg-black rounded-[2.5rem] border-[6px] border-surface-variant p-4 shadow-2xl flex flex-col transform md:-translate-y-8 hover:-translate-y-12 transition-transform duration-500">
+<div class="w-32 h-6 bg-black absolute top-0 left-1/2 -translate-x-1/2 rounded-b-xl z-20"></div>
+<div class="flex-1 bg-white rounded-2xl overflow-hidden flex flex-col">
+<div class="p-4 bg-paper-surface border-b border-slate-muted flex justify-between items-center">
+<span class="material-symbols-outlined text-primary">arrow_back</span>
+<h4 class="font-label-md text-label-md text-primary">Customize Order</h4>
+<span class="material-symbols-outlined text-transparent">arrow_back</span>
+</div>
+<div class="p-4 flex-1 flex flex-col gap-4">
+<div class="w-full h-32 bg-cream-soft rounded-lg"></div>
+<div class="space-y-2">
+<div class="h-4 w-3/4 bg-slate-muted rounded"></div>
+<div class="h-4 w-1/2 bg-slate-muted rounded"></div>
+</div>
+<div class="mt-auto bg-primary text-white text-center py-3 rounded-lg font-label-md text-label-md">Place Order</div>
+</div>
+</div>
+<div class="absolute -bottom-8 left-1/2 -translate-x-1/2 font-mono-sm text-mono-sm text-action-lime bg-primary px-4 py-1 rounded-full whitespace-nowrap">Step 2: Order Ahead</div>
+</div>
+<!-- Screen 3 -->
+<div class="relative z-10 w-[280px] h-[560px] bg-black rounded-[2.5rem] border-[6px] border-surface-variant p-4 shadow-2xl flex flex-col transform md:rotate-6 hover:rotate-0 transition-transform duration-500">
+<div class="w-32 h-6 bg-black absolute top-0 left-1/2 -translate-x-1/2 rounded-b-xl z-20"></div>
+<div class="flex-1 bg-white rounded-2xl overflow-hidden flex flex-col items-center justify-center p-6 text-center">
+<div class="w-20 h-20 bg-action-lime/20 rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-action-lime text-4xl">check_circle</span>
+</div>
+<h4 class="font-headline-lg-mobile text-headline-lg-mobile text-primary mb-2">Ready for Pickup</h4>
+<p class="font-body-md text-body-md text-secondary mb-6">Head to Express Lane B</p>
+<div class="w-full h-32 bg-cream-soft rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary text-5xl">qr_code_2</span>
+</div>
+</div>
+<div class="absolute -bottom-8 left-1/2 -translate-x-1/2 font-mono-sm text-mono-sm text-action-lime bg-primary px-4 py-1 rounded-full whitespace-nowrap">Step 3: Scan &amp; Go</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA / Outcome Section -->
+<section class="py-32 bg-forest-deep text-on-tertiary px-margin-mobile md:px-margin-desktop relative overflow-hidden">
+<!-- Decorative blur -->
+<div class="absolute top-0 right-0 w-96 h-96 bg-action-lime/10 rounded-full blur-[100px]"></div>
+<div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center relative z-10">
+<div>
+<h2 class="font-display-lg text-display-lg text-white mb-6">Elevate your institution's culinary standard.</h2>
+<ul class="space-y-6 mb-10">
+<li class="flex items-start gap-4">
+<div class="mt-1 bg-action-lime/20 p-1 rounded">
+<span class="material-symbols-outlined text-action-lime" style="font-size: 20px;">trending_up</span>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-white">Increase Participation</h4>
+<p class="font-body-md text-body-md text-secondary-fixed-dim">Drive higher meal plan adoption through quality and convenience.</p>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<div class="mt-1 bg-action-lime/20 p-1 rounded">
+<span class="material-symbols-outlined text-action-lime" style="font-size: 20px;">savings</span>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-white">Optimize Operations</h4>
+<p class="font-body-md text-body-md text-secondary-fixed-dim">Reduce food waste and labor costs via predictive analytics.</p>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<div class="mt-1 bg-action-lime/20 p-1 rounded">
+<span class="material-symbols-outlined text-action-lime" style="font-size: 20px;">psychology</span>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-white">Enhance Wellbeing</h4>
+<p class="font-body-md text-body-md text-secondary-fixed-dim">Support student health with transparent nutritional data.</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="bg-primary-container p-10 rounded-2xl border border-on-surface-variant flex flex-col items-start">
+<h3 class="font-headline-lg text-headline-lg text-white mb-4">Ready to transform your campus?</h3>
+<p class="font-body-md text-body-md text-secondary-fixed-dim mb-8">Schedule a consultation with our education sector specialists to build a bespoke dining program.</p>
+<form class="w-full space-y-4 mb-6">
+<div>
+<input class="w-full bg-transparent border-0 border-b border-surface-tint focus:border-action-lime focus:ring-0 text-white font-mono-sm py-3 px-0 placeholder-secondary-fixed-dim transition-colors" placeholder="Institution Email" type="email">
+</div>
+</form>
+<button class="w-full bg-action-lime text-tertiary px-8 py-4 rounded-DEFAULT font-label-md text-label-md hover:bg-tertiary-fixed transition-colors">
+                        Build Your Campus Dining Program
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Site Footer (Shared) -->
+<footer class="bg-forest-deep w-full pt-16 pb-8 md:pt-24 border-t border-secondary/20">
+<div class="flex flex-col md:flex-row justify-between items-start px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto gap-12">
+<div class="md:max-w-xs">
+<a href="Index.html"><span class="font-display-lg text-headline-lg text-action-lime mb-4 block font-bold tracking-tighter">Foodify</span></a>
+<p class="font-body-md text-body-md text-cream-soft mb-8">Intelligence meets Food. Elevating the modern workplace dining experience.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full border border-secondary/40 flex items-center justify-center text-cream-soft hover:border-action-lime hover:text-action-lime transition-colors" href="Contact.html" aria-label="Contact"><span class="material-symbols-outlined" data-icon="mail">mail</span></a>
+<a class="w-10 h-10 rounded-full border border-secondary/40 flex items-center justify-center text-cream-soft hover:border-action-lime hover:text-action-lime transition-colors" href="About.html" aria-label="About"><span class="material-symbols-outlined" data-icon="info">info</span></a>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 flex-1">
+<div>
+<h4 class="font-label-md text-label-md text-white mb-6 uppercase tracking-wider">Solutions</h4>
+<ul class="space-y-4">
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-action-lime transition-colors" href="CafeteriaManaged.html">Cafeteria Managed</a></li>
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-action-lime transition-colors" href="FoodifyApp.html">Dining OS</a></li>
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-action-lime transition-colors" href="EventGiftingService.html">Events &amp; Gifting</a></li>
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-action-lime transition-colors" href="PantryService.html">Pantry Services</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-white mb-6 uppercase tracking-wider">Sectors</h4>
+<ul class="space-y-4">
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-action-lime transition-colors" href="CoporateSector.html">Corporate</a></li>
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-action-lime transition-colors" href="EducationSector.html">Education</a></li>
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-action-lime transition-colors" href="HealthcareSector.html">Healthcare</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-white mb-6 uppercase tracking-wider">Company</h4>
+<ul class="space-y-4">
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-action-lime transition-colors" href="About.html">About</a></li>
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-action-lime transition-colors" href="CaseStudies.html">Case Studies</a></li>
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-action-lime transition-colors" href="Contact.html">Contact</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-white mb-6 uppercase tracking-wider">Legal</h4>
+<ul class="space-y-4">
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-action-lime transition-colors" href="PrivacyPolicy.html">Privacy Policy</a></li>
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-action-lime transition-colors" href="TermsOfService.html">Terms of Service</a></li>
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-action-lime transition-colors" href="Sustainability.html">Sustainability</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="mt-16 md:mt-24 pt-8 border-t border-secondary/20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto text-center md:text-left">
+<p class="font-body-md text-body-md text-secondary-fixed-dim">© 2025 Foodify Culinary Solutions. Intelligence meets Food.</p>
+</div>
+</footer>
+<!-- Simple JS for Mobile Menu Toggle -->
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const toggle = document.getElementById('menu-toggle');
+            const menu = document.getElementById('mobile-menu');
+            if (toggle && menu) {
+                toggle.addEventListener('click', () => menu.classList.toggle('hidden'));
+            }
+        });
+    </script>
+
+</body></html>

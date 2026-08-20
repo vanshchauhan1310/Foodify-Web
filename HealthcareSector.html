@@ -1,0 +1,535 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Foodify - Healthcare Food Service Solutions</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+        @font-face {
+            font-family: 'Geist';
+            src: url('https://cdn.jsdelivr.net/gh/vercel/geist-font/packages/next/dist/fonts/geist-sans/Geist-Regular.woff2') format('woff2');
+            font-weight: 400;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Geist';
+            src: url('https://cdn.jsdelivr.net/gh/vercel/geist-font/packages/next/dist/fonts/geist-sans/Geist-Medium.woff2') format('woff2');
+            font-weight: 500;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Geist';
+            src: url('https://cdn.jsdelivr.net/gh/vercel/geist-font/packages/next/dist/fonts/geist-sans/Geist-SemiBold.woff2') format('woff2');
+            font-weight: 600;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Geist';
+            src: url('https://cdn.jsdelivr.net/gh/vercel/geist-font/packages/next/dist/fonts/geist-sans/Geist-Bold.woff2') format('woff2');
+            font-weight: 700;
+            font-style: normal;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-container": "#858384",
+                        "tertiary-container": "#0d2000",
+                        "on-secondary": "#ffffff",
+                        "primary-container": "#1c1b1c",
+                        "on-tertiary": "#ffffff",
+                        "action-lime": "#94FA33",
+                        "tertiary": "#000000",
+                        "on-error": "#ffffff",
+                        "surface-container": "#efeded",
+                        "tertiary-fixed-dim": "#7bde08",
+                        "primary-fixed": "#e5e2e3",
+                        "secondary-fixed": "#e2e2e2",
+                        "forest-deep": "#0F1A0F",
+                        "secondary-container": "#dcdddc",
+                        "primary": "#000000",
+                        "on-primary-fixed": "#1c1b1c",
+                        "outline": "#77777b",
+                        "surface-variant": "#e4e2e2",
+                        "on-tertiary-container": "#509400",
+                        "on-surface": "#1b1c1c",
+                        "slate-muted": "#E5E5E1",
+                        "on-primary-fixed-variant": "#474647",
+                        "secondary-fixed-dim": "#c6c7c6",
+                        "on-secondary-fixed": "#1a1c1c",
+                        "tertiary-fixed": "#96fc35",
+                        "primary-fixed-dim": "#c8c6c7",
+                        "surface-container-high": "#e9e8e7",
+                        "surface-container-low": "#f5f3f3",
+                        "cream-soft": "#F4F4F0",
+                        "on-primary": "#ffffff",
+                        "secondary": "#5d5f5e",
+                        "inverse-surface": "#303031",
+                        "surface-container-highest": "#e4e2e2",
+                        "on-secondary-container": "#5f6161",
+                        "surface-bright": "#fbf9f8",
+                        "paper-surface": "#F9F9F8",
+                        "inverse-primary": "#c8c6c7",
+                        "inverse-on-surface": "#f2f0f0",
+                        "surface": "#fbf9f8",
+                        "on-tertiary-fixed-variant": "#285000",
+                        "error-container": "#ffdad6",
+                        "on-error-container": "#93000a",
+                        "outline-variant": "#c7c6ca",
+                        "surface-dim": "#dbdad9",
+                        "error": "#ba1a1a",
+                        "on-tertiary-fixed": "#0d2000",
+                        "on-secondary-fixed-variant": "#454747",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-tint": "#5f5e5f",
+                        "on-background": "#1b1c1c",
+                        "background": "#fbf9f8",
+                        "on-surface-variant": "#46464a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-max": "1440px",
+                        "gutter": "24px",
+                        "margin-tablet": "32px",
+                        "unit": "4px",
+                        "margin-mobile": "16px",
+                        "margin-desktop": "64px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Geist"],
+                        "headline-lg-mobile": ["Geist"],
+                        "body-md": ["Inter"],
+                        "display-xl": ["Geist"],
+                        "body-lg": ["Inter"],
+                        "label-md": ["Geist"],
+                        "mono-sm": ["Geist"],
+                        "headline-lg": ["Geist"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["48px", {"lineHeight": "52px", "letterSpacing": "-0.03em", "fontWeight": "700"}],
+                        "headline-lg-mobile": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                        "body-md": ["15px", {"lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400"}],
+                        "display-xl": ["72px", {"lineHeight": "72px", "letterSpacing": "-0.04em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "400"}],
+                        "label-md": ["13px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                        "mono-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0em", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600"}]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased selection:bg-action-lime selection:text-tertiary">
+<!-- Site Header (Shared) -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/30 transition-all duration-300">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20 max-w-container-max mx-auto">
+<a class="flex items-center gap-3 transition-transform hover:scale-105 active:scale-95 cursor-pointer" href="Index.html">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="restaurant">restaurant</span>
+<span class="font-display-lg text-headline-lg-mobile md:text-headline-lg font-bold text-primary tracking-tighter">Foodify</span>
+</a>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="text-secondary hover:text-primary transition-colors font-label-md text-label-md" href="Index.html#services">Services</a>
+<a class="text-primary font-bold border-b-2 border-action-lime py-1 font-label-md text-label-md" href="Index.html#sectors">Sectors</a>
+<a class="text-secondary hover:text-primary transition-colors font-label-md text-label-md" href="FoodifyApp.html">Dining OS</a>
+<a class="text-secondary hover:text-primary transition-colors font-label-md text-label-md" href="About.html">About</a>
+</nav>
+<a class="bg-primary text-on-primary px-6 py-2 rounded-full font-label-md text-label-md hover:bg-forest-deep transition-colors hidden md:block" href="Contact.html">Get in Touch</a>
+<button class="md:hidden text-primary" id="menu-toggle">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+<div class="md:hidden hidden bg-surface/95 backdrop-blur-md border-t border-outline-variant/30 px-margin-mobile py-4" id="mobile-menu">
+<nav class="flex flex-col gap-2">
+<a class="px-4 py-3 rounded-xl font-label-md text-label-md text-secondary hover:bg-surface-container transition-colors" href="Index.html#services">Services</a>
+<a class="px-4 py-3 rounded-xl font-label-md text-label-md text-primary font-bold hover:bg-surface-container transition-colors" href="Index.html#sectors">Sectors</a>
+<a class="px-4 py-3 rounded-xl font-label-md text-label-md text-secondary hover:bg-surface-container transition-colors" href="FoodifyApp.html">Dining OS</a>
+<a class="px-4 py-3 rounded-xl font-label-md text-label-md text-secondary hover:bg-surface-container transition-colors" href="About.html">About</a>
+<a class="mt-2 bg-primary text-on-primary text-center px-6 py-3 rounded-full font-label-md text-label-md" href="Contact.html">Get in Touch</a>
+</nav>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative pt-24 pb-32 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto overflow-hidden">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="z-10 relative">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-surface-container-low rounded-full mb-8 border border-outline-variant">
+<span class="w-2 h-2 rounded-full bg-action-lime"></span>
+<span class="font-mono-sm text-mono-sm text-secondary uppercase tracking-widest">For Healthcare Institutions</span>
+</div>
+<h1 class="font-display-xl text-display-xl text-primary mb-6">Food Service With Care at Every Step.</h1>
+<p class="font-body-lg text-body-lg text-secondary mb-10 max-w-lg">
+                        Reliable food management for patients, staff, and visitors—engineered for safety, clinical compliance, and operational reliability.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="inline-flex items-center justify-center px-6 py-3 bg-action-lime text-primary font-label-md text-label-md rounded hover:bg-tertiary-fixed transition-colors">
+                            Talk to Healthcare Team
+                            <span class="material-symbols-outlined ml-2 text-[18px]">arrow_forward</span>
+</button>
+<button class="inline-flex items-center justify-center px-6 py-3 bg-surface text-primary border border-outline-variant font-label-md text-label-md rounded hover:bg-surface-container-low transition-colors">
+                            View Case Studies
+                        </button>
+</div>
+</div>
+<div class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden border border-outline-variant shadow-lg bg-surface-container">
+<img alt="Modern hospital dining environment" class="absolute inset-0 w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLuHoDgalTDKdsGGRXLHepLveut10ZpjoK2hU73psClRHemWjmeWbOywU0gJcd8Ao_uGbLE5AId-HQRr1wlavqzGcT46PkaE60p9zu3Ko1l1xIoVacTi7mF7cNdHv6oVvEFd8AJ2BXLArCwhY7DdVHfHUyvFEDgwqYRtsRKOq5shsgdUv6f2Z17DepVkIt6n4xMqhfdjBDYandXZ7-4n3LJFLorzOvNsYr2mp2TDgQQyeMvuea7qzjKYkQ">
+<!-- Floating Metrics -->
+<div class="absolute bottom-6 left-6 flex flex-col gap-3">
+<div class="bg-surface/90 backdrop-blur-md px-4 py-2 rounded border border-outline-variant shadow-sm flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-cream-soft flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px] text-tertiary-container">favorite</span>
+</div>
+<div>
+<div class="font-mono-sm text-mono-sm text-secondary">Patient Satisfaction</div>
+<div class="font-label-md text-label-md text-primary font-bold">96%</div>
+</div>
+</div>
+<div class="bg-surface/90 backdrop-blur-md px-4 py-2 rounded border border-outline-variant shadow-sm flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-cream-soft flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px] text-tertiary-container">verified</span>
+</div>
+<div>
+<div class="font-mono-sm text-mono-sm text-secondary">Compliance Score</div>
+<div class="font-label-md text-label-md text-primary font-bold">100%</div>
+</div>
+</div>
+</div>
+<div class="absolute top-6 right-6 bg-surface/90 backdrop-blur-md px-4 py-2 rounded border border-outline-variant shadow-sm flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-cream-soft flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px] text-tertiary-container">restaurant</span>
+</div>
+<div>
+<div class="font-mono-sm text-mono-sm text-secondary">Daily Trays</div>
+<div class="font-label-md text-label-md text-primary font-bold">1,400+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- The Challenge Section -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop bg-surface-container-lowest border-y border-outline-variant">
+<div class="max-w-container-max mx-auto">
+<div class="text-center mb-16">
+<span class="font-mono-sm text-mono-sm text-secondary uppercase tracking-widest mb-4 block">The Challenge</span>
+<h2 class="font-display-lg text-display-lg text-primary max-w-3xl mx-auto">Mission-Critical Healthcare Pressures.</h2>
+<p class="font-body-lg text-body-lg text-secondary mt-6 max-w-2xl mx-auto">Delivering food in a healthcare setting is complex. It demands rigorous precision, clinical safety, and absolute reliability.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Patient Diets -->
+<div class="bg-surface p-8 rounded-2xl border border-outline-variant hover:shadow-md transition-shadow">
+<div class="w-12 h-12 bg-surface-container-low rounded-full flex items-center justify-center mb-6 border border-outline-variant">
+<span class="material-symbols-outlined text-primary text-[24px]">medical_services</span>
+</div>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary mb-3">Patient Diets</h3>
+<p class="font-body-md text-body-md text-secondary">Medically tailored diets with strict adherence to allergies, nutritional requirements, and specific patient plans.</p>
+</div>
+<!-- High Operational Pressure -->
+<div class="bg-surface p-8 rounded-2xl border border-outline-variant hover:shadow-md transition-shadow">
+<div class="w-12 h-12 bg-surface-container-low rounded-full flex items-center justify-center mb-6 border border-outline-variant">
+<span class="material-symbols-outlined text-primary text-[24px]">timer</span>
+</div>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary mb-3">High Operational Pressure</h3>
+<p class="font-body-md text-body-md text-secondary">Strict meal schedules coordinating with medical rounds, testing, and staff shifts without disruption.</p>
+</div>
+<!-- Hygiene & Safety -->
+<div class="bg-surface p-8 rounded-2xl border border-outline-variant hover:shadow-md transition-shadow">
+<div class="w-12 h-12 bg-surface-container-low rounded-full flex items-center justify-center mb-6 border border-outline-variant">
+<span class="material-symbols-outlined text-primary text-[24px]">sanitizer</span>
+</div>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary mb-3">Hygiene &amp; Safety</h3>
+<p class="font-body-md text-body-md text-secondary">Clinical-grade standards for food handling, temperature control, and cross-contamination prevention.</p>
+</div>
+<!-- Reliability -->
+<div class="bg-surface p-8 rounded-2xl border border-outline-variant hover:shadow-md transition-shadow">
+<div class="w-12 h-12 bg-surface-container-low rounded-full flex items-center justify-center mb-6 border border-outline-variant">
+<span class="material-symbols-outlined text-primary text-[24px]">published_with_changes</span>
+</div>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary mb-3">Reliability</h3>
+<p class="font-body-md text-body-md text-secondary">24/7/365 uninterrupted service delivery, even during emergencies or supply chain disruptions.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- How Foodify Operates -->
+<section class="py-32 px-margin-mobile md:px-margin-desktop bg-surface relative overflow-hidden">
+<div class="max-w-container-max mx-auto relative z-10">
+<div class="mb-20">
+<span class="font-mono-sm text-mono-sm text-secondary uppercase tracking-widest mb-4 block">Workflow</span>
+<h2 class="font-display-lg text-display-lg text-primary max-w-3xl">How Foodify Operates</h2>
+<p class="font-body-lg text-body-lg text-secondary mt-6 max-w-2xl">A clinical-grade, 6-step framework designed for absolute safety and precision.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-16 gap-x-8 relative">
+<!-- Connectors (Hidden on mobile) -->
+<div class="hidden lg:block absolute top-[28px] left-[10%] right-[10%] h-[2px] bg-outline-variant/30 -z-10"></div>
+<div class="hidden lg:block absolute top-[calc(50%+28px)] left-[10%] right-[10%] h-[2px] bg-outline-variant/30 -z-10"></div>
+<!-- Step 1 -->
+<div class="relative pl-6 md:pl-0">
+<div class="w-14 h-14 bg-surface border-2 border-primary rounded-xl flex items-center justify-center font-headline-lg text-headline-lg text-primary mb-6 relative z-10 shadow-sm">01</div>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary mb-3">Understand Requirements</h3>
+<p class="font-body-md text-body-md text-secondary">Analyzing patient capacity, specific dietary needs, and facility infrastructure.</p>
+</div>
+<!-- Step 2 -->
+<div class="relative pl-6 md:pl-0">
+<div class="w-14 h-14 bg-surface border-2 border-outline-variant rounded-xl flex items-center justify-center font-headline-lg text-headline-lg text-secondary mb-6 relative z-10">02</div>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary mb-3">Menu &amp; Meal Planning</h3>
+<p class="font-body-md text-body-md text-secondary">Crafting medically approved menus balancing dietary guidelines with staff/visitor options.</p>
+</div>
+<!-- Step 3 -->
+<div class="relative pl-6 md:pl-0">
+<div class="w-14 h-14 bg-surface border-2 border-outline-variant rounded-xl flex items-center justify-center font-headline-lg text-headline-lg text-secondary mb-6 relative z-10">03</div>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary mb-3">Preparation &amp; Operations</h3>
+<p class="font-body-md text-body-md text-secondary">Rigorous kitchen monitoring, inventory management, and safe food handling.</p>
+</div>
+<!-- Step 4 -->
+<div class="relative pl-6 md:pl-0">
+<div class="w-14 h-14 bg-surface border-2 border-outline-variant rounded-xl flex items-center justify-center font-headline-lg text-headline-lg text-secondary mb-6 relative z-10">04</div>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary mb-3">Patient Dining</h3>
+<div class="bg-surface-container-low p-4 rounded-lg border border-outline-variant text-sm text-secondary font-mono-sm flex flex-wrap gap-2 items-center">
+<span class="">Approval</span><span class="material-symbols-outlined text-[16px]">arrow_right_alt</span>
+<span class="">Received</span><span class="material-symbols-outlined text-[16px]">arrow_right_alt</span>
+<span class="">Prep</span><span class="material-symbols-outlined text-[16px]">arrow_right_alt</span>
+<span class="">Checks</span><span class="material-symbols-outlined text-[16px]">arrow_right_alt</span>
+<span class="text-primary font-bold">Delivery</span>
+</div>
+</div>
+<!-- Step 5 -->
+<div class="relative pl-6 md:pl-0">
+<div class="w-14 h-14 bg-surface border-2 border-outline-variant rounded-xl flex items-center justify-center font-headline-lg text-headline-lg text-secondary mb-6 relative z-10">05</div>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary mb-3">Employee &amp; Visitor Dining</h3>
+<p class="font-body-md text-body-md text-secondary">Separate digital cafeteria flows ensuring quick, healthy access for busy professionals.</p>
+</div>
+<!-- Step 6 -->
+<div class="relative pl-6 md:pl-0">
+<div class="w-14 h-14 bg-surface border-2 border-outline-variant rounded-xl flex items-center justify-center font-headline-lg text-headline-lg text-secondary mb-6 relative z-10">06</div>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary mb-3">Monitor &amp; Improve</h3>
+<p class="font-body-md text-body-md text-secondary">Continuous compliance logging, real-time feedback loops, and service optimization.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Solutions -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop bg-surface-container-low border-t border-outline-variant">
+<div class="max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6">
+<div>
+<span class="font-mono-sm text-mono-sm text-secondary uppercase tracking-widest mb-4 block">Platform Capabilities</span>
+<h2 class="font-display-lg text-display-lg text-primary max-w-2xl">Comprehensive Healthcare Solutions.</h2>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<div class="bg-surface border border-outline-variant rounded-2xl p-8 hover:shadow-lg transition-shadow group cursor-pointer">
+<div class="w-12 h-12 bg-action-lime/20 rounded-full flex items-center justify-center mb-6 group-hover:bg-action-lime transition-colors">
+<span class="material-symbols-outlined text-tertiary-container text-[24px]">local_dining</span>
+</div>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary mb-3">Patient Dining</h3>
+<p class="font-body-md text-body-md text-secondary">End-to-end management of specialized patient trays, nutritional tracking, and room service delivery.</p>
+</div>
+<div class="bg-surface border border-outline-variant rounded-2xl p-8 hover:shadow-lg transition-shadow group cursor-pointer">
+<div class="w-12 h-12 bg-action-lime/20 rounded-full flex items-center justify-center mb-6 group-hover:bg-action-lime transition-colors">
+<span class="material-symbols-outlined text-tertiary-container text-[24px]">groups</span>
+</div>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary mb-3">Employee Dining</h3>
+<p class="font-body-md text-body-md text-secondary">Nourishing, fast options for medical staff, including 24/7 availability for night shifts.</p>
+</div>
+<div class="bg-surface border border-outline-variant rounded-2xl p-8 hover:shadow-lg transition-shadow group cursor-pointer">
+<div class="w-12 h-12 bg-action-lime/20 rounded-full flex items-center justify-center mb-6 group-hover:bg-action-lime transition-colors">
+<span class="material-symbols-outlined text-tertiary-container text-[24px]">coffee</span>
+</div>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary mb-3">Visitor Services</h3>
+<p class="font-body-md text-body-md text-secondary">Comforting, accessible food spaces for families and guests within the hospital environment.</p>
+</div>
+<div class="bg-surface border border-outline-variant rounded-2xl p-8 hover:shadow-lg transition-shadow group cursor-pointer">
+<div class="w-12 h-12 bg-action-lime/20 rounded-full flex items-center justify-center mb-6 group-hover:bg-action-lime transition-colors">
+<span class="material-symbols-outlined text-tertiary-container text-[24px]">smartphone</span>
+</div>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary mb-3">Digital Cafeteria</h3>
+<p class="font-body-md text-body-md text-secondary">App-based ordering and payment systems to reduce queue times and improve dining experience.</p>
+</div>
+<div class="bg-surface border border-outline-variant rounded-2xl p-8 hover:shadow-lg transition-shadow group cursor-pointer">
+<div class="w-12 h-12 bg-action-lime/20 rounded-full flex items-center justify-center mb-6 group-hover:bg-action-lime transition-colors">
+<span class="material-symbols-outlined text-tertiary-container text-[24px]">verified_user</span>
+</div>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary mb-3">Safety &amp; Quality</h3>
+<p class="font-body-md text-body-md text-secondary">Automated hazard analysis, clinical-grade sanitization protocols, and continuous auditing.</p>
+</div>
+<div class="bg-surface border border-outline-variant rounded-2xl p-8 hover:shadow-lg transition-shadow group cursor-pointer">
+<div class="w-12 h-12 bg-action-lime/20 rounded-full flex items-center justify-center mb-6 group-hover:bg-action-lime transition-colors">
+<span class="material-symbols-outlined text-tertiary-container text-[24px]">kitchen</span>
+</div>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary mb-3">Pantry/Vending</h3>
+<p class="font-body-md text-body-md text-secondary">Smart vending and micro-markets offering healthy, automated options around the clock.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust & Safety Engine (Dark Mode) -->
+<section class="py-32 px-margin-mobile md:px-margin-desktop bg-forest-deep text-on-primary relative overflow-hidden">
+<div class="max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div>
+<span class="font-mono-sm text-mono-sm text-action-lime uppercase tracking-widest mb-4 block">Trust &amp; Safety Engine</span>
+<h2 class="font-display-lg text-display-lg mb-6">Uncompromising Compliance.</h2>
+<p class="font-body-lg text-body-lg text-secondary-fixed-dim mb-10 max-w-lg">
+                Our proprietary Compliance Console monitors every critical control point. From automated IoT temperature logs to digital auditing trails, we ensure absolute clinical safety.
+            </p>
+<ul class="space-y-4 mb-10">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-action-lime">check_circle</span>
+<span class="font-body-md text-body-md text-surface-container-high">Real-time IoT Temp Logs</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-action-lime">check_circle</span>
+<span class="font-body-md text-body-md text-surface-container-high">Automated Hazard Analysis</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-action-lime">check_circle</span>
+<span class="font-body-md text-body-md text-surface-container-high">Digital Auditing &amp; Traceability</span>
+</li>
+</ul>
+</div>
+<!-- UI Snippet -->
+<div class="bg-black/40 border border-on-secondary-fixed-variant rounded-2xl p-6 shadow-2xl backdrop-blur-sm relative">
+<div class="flex items-center justify-between border-b border-on-secondary-fixed-variant pb-4 mb-6">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-action-lime text-[20px]">shield</span>
+<span class="font-label-md text-label-md text-on-primary font-bold">Compliance Console</span>
+</div>
+<div class="flex gap-2">
+<div class="w-3 h-3 rounded-full bg-on-secondary-fixed-variant"></div>
+<div class="w-3 h-3 rounded-full bg-on-secondary-fixed-variant"></div>
+<div class="w-3 h-3 rounded-full bg-on-secondary-fixed-variant"></div>
+</div>
+</div>
+<div class="space-y-4">
+<div class="bg-forest-deep border border-on-secondary-fixed-variant rounded-xl p-4 flex justify-between items-center">
+<div>
+<div class="font-label-md text-label-md text-secondary-fixed-dim mb-1">Cold Storage A1</div>
+<div class="font-mono-sm text-mono-sm text-on-primary">IoT Sensor: Active</div>
+</div>
+<div class="text-right">
+<div class="font-headline-lg-mobile text-headline-lg-mobile text-action-lime">34.2°F</div>
+<div class="font-mono-sm text-mono-sm text-secondary-fixed-dim">Status: Optimal</div>
+</div>
+</div>
+<div class="bg-forest-deep border border-on-secondary-fixed-variant rounded-xl p-4 flex justify-between items-center">
+<div>
+<div class="font-label-md text-label-md text-secondary-fixed-dim mb-1">Hot Prep Line B</div>
+<div class="font-mono-sm text-mono-sm text-on-primary">IoT Sensor: Active</div>
+</div>
+<div class="text-right">
+<div class="font-headline-lg-mobile text-headline-lg-mobile text-action-lime">165°F</div>
+<div class="font-mono-sm text-mono-sm text-secondary-fixed-dim">Status: Optimal</div>
+</div>
+</div>
+<div class="bg-forest-deep border border-on-secondary-fixed-variant rounded-xl p-4 flex justify-between items-center">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-action-lime/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-action-lime text-[16px]">task_alt</span>
+</div>
+<div>
+<div class="font-label-md text-label-md text-on-primary">Morning Audit Complete</div>
+<div class="font-mono-sm text-mono-sm text-secondary-fixed-dim">Signed by: J. Davis (Clinical Dietitian)</div>
+</div>
+</div>
+<div class="font-mono-sm text-mono-sm text-secondary-fixed-dim">08:00 AM</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Outcome Section -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop bg-surface">
+<div class="max-w-container-max mx-auto text-center">
+<span class="font-mono-sm text-mono-sm text-secondary uppercase tracking-widest mb-4 block">The Outcome</span>
+<h2 class="font-display-lg text-display-lg text-primary max-w-4xl mx-auto mb-16">Operational Clarity. Clinical Excellence.</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+<div class="p-8 border border-outline-variant rounded-2xl bg-surface-container-lowest">
+<span class="font-display-xl text-display-xl text-action-lime block mb-4 border-b border-outline-variant pb-4">1</span>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary mb-3">Consistent Service</h3>
+<p class="font-body-md text-body-md text-secondary">Reliable delivery of nutritionally accurate meals, regardless of facility capacity or operational challenges.</p>
+</div>
+<div class="p-8 border border-outline-variant rounded-2xl bg-surface-container-lowest">
+<span class="font-display-xl text-display-xl text-action-lime block mb-4 border-b border-outline-variant pb-4">2</span>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary mb-3">Staff Satisfaction</h3>
+<p class="font-body-md text-body-md text-secondary">Providing medical staff with accessible, high-quality nourishment to support their demanding schedules.</p>
+</div>
+<div class="p-8 border border-outline-variant rounded-2xl bg-surface-container-lowest">
+<span class="font-display-xl text-display-xl text-action-lime block mb-4 border-b border-outline-variant pb-4">3</span>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary mb-3">Reduced Complexity</h3>
+<p class="font-body-md text-body-md text-secondary">Streamlining vendor management and compliance tracking into a single, cohesive food service operation.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Site Footer (Shared) -->
+<footer class="bg-forest-deep w-full pt-16 pb-8 md:pt-24 border-t border-secondary/20">
+<div class="flex flex-col md:flex-row justify-between items-start px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto gap-12">
+<div class="md:max-w-xs">
+<a href="Index.html"><span class="font-display-lg text-headline-lg text-action-lime mb-4 block font-bold tracking-tighter">Foodify</span></a>
+<p class="font-body-md text-body-md text-cream-soft mb-8">Intelligence meets Food. Elevating the modern workplace dining experience.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full border border-secondary/40 flex items-center justify-center text-cream-soft hover:border-action-lime hover:text-action-lime transition-colors" href="Contact.html" aria-label="Contact"><span class="material-symbols-outlined" data-icon="mail">mail</span></a>
+<a class="w-10 h-10 rounded-full border border-secondary/40 flex items-center justify-center text-cream-soft hover:border-action-lime hover:text-action-lime transition-colors" href="About.html" aria-label="About"><span class="material-symbols-outlined" data-icon="info">info</span></a>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 flex-1">
+<div>
+<h4 class="font-label-md text-label-md text-white mb-6 uppercase tracking-wider">Solutions</h4>
+<ul class="space-y-4">
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-action-lime transition-colors" href="CafeteriaManaged.html">Cafeteria Managed</a></li>
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-action-lime transition-colors" href="FoodifyApp.html">Dining OS</a></li>
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-action-lime transition-colors" href="EventGiftingService.html">Events &amp; Gifting</a></li>
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-action-lime transition-colors" href="PantryService.html">Pantry Services</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-white mb-6 uppercase tracking-wider">Sectors</h4>
+<ul class="space-y-4">
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-action-lime transition-colors" href="CoporateSector.html">Corporate</a></li>
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-action-lime transition-colors" href="EducationSector.html">Education</a></li>
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-action-lime transition-colors" href="HealthcareSector.html">Healthcare</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-white mb-6 uppercase tracking-wider">Company</h4>
+<ul class="space-y-4">
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-action-lime transition-colors" href="About.html">About</a></li>
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-action-lime transition-colors" href="CaseStudies.html">Case Studies</a></li>
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-action-lime transition-colors" href="Contact.html">Contact</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-white mb-6 uppercase tracking-wider">Legal</h4>
+<ul class="space-y-4">
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-action-lime transition-colors" href="PrivacyPolicy.html">Privacy Policy</a></li>
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-action-lime transition-colors" href="TermsOfService.html">Terms of Service</a></li>
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-action-lime transition-colors" href="Sustainability.html">Sustainability</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="mt-16 md:mt-24 pt-8 border-t border-secondary/20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto text-center md:text-left">
+<p class="font-body-md text-body-md text-secondary-fixed-dim">© 2025 Foodify Culinary Solutions. Intelligence meets Food.</p>
+</div>
+</footer>
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const toggle = document.getElementById('menu-toggle');
+            const menu = document.getElementById('mobile-menu');
+            if (toggle && menu) {
+                toggle.addEventListener('click', () => menu.classList.toggle('hidden'));
+            }
+        });
+    </script>
+
+</body></html>

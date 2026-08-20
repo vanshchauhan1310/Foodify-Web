@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Foodify - Corporate Dining Solutions</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed-dim": "#7bde08",
+                        "forest-deep": "#0F1A0F",
+                        "on-primary-fixed": "#1c1b1c",
+                        "surface-container-low": "#f5f3f3",
+                        "inverse-primary": "#c8c6c7",
+                        "secondary": "#5d5f5e",
+                        "primary-container": "#1c1b1c",
+                        "background": "#fbf9f8",
+                        "surface-container": "#efeded",
+                        "outline-variant": "#c7c6ca",
+                        "on-tertiary-fixed": "#0d2000",
+                        "on-secondary-fixed": "#1a1c1c",
+                        "secondary-container": "#dcdddc",
+                        "surface-tint": "#5f5e5f",
+                        "primary-fixed": "#e5e2e3",
+                        "on-secondary-fixed-variant": "#454747",
+                        "surface-container-highest": "#e4e2e2",
+                        "tertiary-fixed": "#96fc35",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-container": "#5f6161",
+                        "on-error": "#ffffff",
+                        "surface-dim": "#dbdad9",
+                        "cream-soft": "#F4F4F0",
+                        "primary-fixed-dim": "#c8c6c7",
+                        "error": "#ba1a1a",
+                        "tertiary-container": "#0d2000",
+                        "surface-variant": "#e4e2e2",
+                        "inverse-on-surface": "#f2f0f0",
+                        "on-tertiary-fixed-variant": "#285000",
+                        "secondary-fixed-dim": "#c6c7c6",
+                        "on-background": "#1b1c1c",
+                        "paper-surface": "#F9F9F8",
+                        "surface": "#fbf9f8",
+                        "slate-muted": "#E5E5E1",
+                        "surface-container-lowest": "#ffffff",
+                        "outline": "#77777b",
+                        "on-surface-variant": "#46464a",
+                        "surface-bright": "#fbf9f8",
+                        "tertiary": "#000000",
+                        "on-primary": "#ffffff",
+                        "on-primary-container": "#858384",
+                        "error-container": "#ffdad6",
+                        "secondary-fixed": "#e2e2e2",
+                        "primary": "#000000",
+                        "on-surface": "#1b1c1c",
+                        "on-error-container": "#93000a",
+                        "inverse-surface": "#303031",
+                        "action-lime": "#94FA33",
+                        "on-tertiary-container": "#509400",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-high": "#e9e8e7",
+                        "on-primary-fixed-variant": "#474647"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "4px",
+                        "container-max": "1440px",
+                        "margin-desktop": "64px",
+                        "margin-mobile": "16px",
+                        "margin-tablet": "32px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Inter", "sans-serif"],
+                        "display-lg": ["Geist", "sans-serif"],
+                        "display-xl": ["Geist", "sans-serif"],
+                        "label-md": ["Geist", "sans-serif"],
+                        "headline-lg-mobile": ["Geist", "sans-serif"],
+                        "body-lg": ["Inter", "sans-serif"],
+                        "headline-lg": ["Geist", "sans-serif"],
+                        "mono-sm": ["Geist", "monospace"]
+                    },
+                    "fontSize": {
+                        "body-md": ["15px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }],
+                        "display-lg": ["48px", { "lineHeight": "52px", "letterSpacing": "-0.03em", "fontWeight": "700" }],
+                        "display-xl": ["72px", { "lineHeight": "72px", "letterSpacing": "-0.04em", "fontWeight": "700" }],
+                        "label-md": ["13px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" }],
+                        "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "mono-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0em", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: theme('colors.paper-surface');
+            color: theme('colors.primary');
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        h1, h2, h3, h4, h5, h6, .font-geist {
+            font-family: 'Geist', sans-serif;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(12px);
+            border: 1px solid theme('colors.slate-muted');
+        }
+        .hero-overlay {
+            background: linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 100%);
+        }
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+        }
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .fade-in-up.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* Staggered animation delays for grid items */
+        .delay-100 { transition-delay: 100ms; }
+        .delay-200 { transition-delay: 200ms; }
+        .delay-300 { transition-delay: 300ms; }
+    </style>
+</head>
+<body class="bg-paper-surface text-primary">
+<!-- Site Header (Shared) -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/30 transition-all duration-300">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20 max-w-container-max mx-auto">
+<a class="flex items-center gap-3 transition-transform hover:scale-105 active:scale-95 cursor-pointer" href="Index.html">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="restaurant">restaurant</span>
+<span class="font-display-lg text-headline-lg-mobile md:text-headline-lg font-bold text-primary tracking-tighter">Foodify</span>
+</a>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="text-secondary hover:text-primary transition-colors font-label-md text-label-md" href="Index.html#services">Services</a>
+<a class="text-secondary hover:text-primary transition-colors font-label-md text-label-md" href="Index.html#sectors">Sectors</a>
+<a class="text-secondary hover:text-primary transition-colors font-label-md text-label-md" href="FoodifyApp.html">Dining OS</a>
+<a class="text-secondary hover:text-primary transition-colors font-label-md text-label-md" href="About.html">About</a>
+</nav>
+<a class="bg-primary text-on-primary px-6 py-2 rounded-full font-label-md text-label-md hover:bg-forest-deep transition-colors hidden md:block" href="Contact.html">Get in Touch</a>
+<button class="md:hidden text-primary" id="menu-toggle">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+<div class="md:hidden hidden bg-surface/95 backdrop-blur-md border-t border-outline-variant/30 px-margin-mobile py-4" id="mobile-menu">
+<nav class="flex flex-col gap-2">
+<a class="px-4 py-3 rounded-xl font-label-md text-label-md text-secondary hover:bg-surface-container transition-colors" href="Index.html#services">Services</a>
+<a class="px-4 py-3 rounded-xl font-label-md text-label-md text-secondary hover:bg-surface-container transition-colors" href="Index.html#sectors">Sectors</a>
+<a class="px-4 py-3 rounded-xl font-label-md text-label-md text-secondary hover:bg-surface-container transition-colors" href="FoodifyApp.html">Dining OS</a>
+<a class="px-4 py-3 rounded-xl font-label-md text-label-md text-secondary hover:bg-surface-container transition-colors" href="About.html">About</a>
+<a class="mt-2 bg-primary text-on-primary text-center px-6 py-3 rounded-full font-label-md text-label-md" href="Contact.html">Get in Touch</a>
+</nav>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative pt-32 pb-24 md:pt-48 md:pb-32 min-h-[90vh] flex items-center">
+<div class="absolute inset-0 z-0 overflow-hidden">
+<img class="w-full h-full object-cover object-center" data-alt="A modern, brightly lit corporate cafeteria space with warm wooden accents, long communal tables, and diverse professionals enjoying a healthy lunch. Large windows let in natural light, highlighting the premium, clean aesthetic of the dining area." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiCOMXzBDkauUs6kFIid8bivLAM_6KxJt-PYRcMFLThgfyGx0PmrGpK5eolLcVq_zQoLBp0LOmioiEn5FYIs8GHFhBWpeervfhHj-oEvJydvs3Dvcu238KPwZm6dzfrXnex4MjivWJXhFWNjzCsnWXxJfQiHb-qdmXI9esIxGcWj4_JGiCqagCbqc3Df5hgDln2zAqWURMSij_NO7SmtFlm9-Co2YvTXJtskErBI5HehviUD5Q5HgY"/>
+<div class="absolute inset-0 hero-overlay"></div>
+</div>
+<div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full">
+<div class="max-w-3xl glass-panel p-8 md:p-12 rounded-2xl md:rounded-3xl shadow-xl animate-on-scroll fade-in-up is-visible">
+<h1 class="font-display-xl text-display-lg md:text-display-xl text-primary mb-2 tracking-tight leading-tight">Elevate Your Workplace Dining Experience.</h1>
+<p class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-secondary mb-6 tracking-tight leading-tight">Integrated Food Solutions for Modern Enterprises.</p>
+<p class="font-body-lg text-body-lg text-secondary mb-10 max-w-xl">Streamline Office Cafeteria Management with Foodify. We bring intelligence, precision, and culinary excellence to your workplace dining experience, blending managed services with our powerful SaaS platform.</p>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="inline-flex items-center justify-center bg-action-lime text-forest-deep px-8 py-4 rounded-full font-label-md text-label-md font-bold hover:bg-tertiary-fixed transition-colors smooth-scroll" href="#contact">
+                            Talk to Us 
+                            <span class="material-symbols-outlined ml-2 text-sm" data-icon="arrow_forward">arrow_forward</span>
+</a>
+<a class="inline-flex items-center justify-center bg-white text-primary border border-slate-muted px-8 py-4 rounded-full font-label-md text-label-md hover:bg-surface-container transition-colors smooth-scroll" href="#services">
+                            Explore Services
+                        </a>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-24 md:py-32 bg-paper-surface" id="services">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="mb-16 md:mb-24 text-center max-w-4xl mx-auto animate-on-scroll fade-in-up is-visible">
+<span class="text-secondary font-label-md text-label-md uppercase tracking-widest mb-4 block">Our Solutions</span>
+<h2 class="font-display-lg text-headline-lg-mobile md:text-display-lg text-primary">Everything you need to keep workplace dining running smoothly.</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+<!-- Service 1 -->
+<a class="bg-white rounded-2xl border border-slate-muted overflow-hidden card-hover group cursor-pointer flex flex-col animate-on-scroll fade-in-up" href="CafeteriaManaged.html">
+<div class="h-48 overflow-hidden relative">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="High quality corporate cafeteria service showing a well-stocked buffet line with fresh, healthy food options. Professionals in business casual attire are serving themselves in a clean, modern environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiCOMXzBDkauUs6kFIid8bivLAM_6KxJt-PYRcMFLThgfyGx0PmrGpK5eolLcVq_zQoLBp0LOmioiEn5FYIs8GHFhBWpeervfhHj-oEvJydvs3Dvcu238KPwZm6dzfrXnex4MjivWJXhFWNjzCsnWXxJfQiHb-qdmXI9esIxGcWj4_JGiCqagCbqc3Df5hgDln2zAqWURMSij_NO7SmtFlm9-Co2YvTXJtskErBI5HehviUD5Q5HgY"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+</div>
+<div class="p-6 flex-grow flex flex-col justify-between bg-white">
+<div>
+<h3 class="font-headline-lg text-headline-lg-mobile text-primary mb-2">Cafeteria Managed Services</h3>
+<p class="font-body-md text-body-md text-secondary">End-to-end management of your corporate dining facilities. We handle the staffing, sourcing, menu planning, and daily operations with surgical precision.</p>
+</div>
+<div class="mt-4 flex justify-between items-center">
+<span class="material-symbols-outlined text-action-lime" data-icon="restaurant_menu">restaurant_menu</span>
+<span class="text-action-lime font-label-md text-[12px] opacity-0 group-hover:opacity-100 transition-opacity">Learn More →</span>
+</div>
+</div>
+</a>
+<!-- Service 2 -->
+<a class="bg-white rounded-2xl border border-slate-muted overflow-hidden card-hover group cursor-pointer flex flex-col animate-on-scroll fade-in-up delay-100 is-visible" href="FoodifyApp.html">
+<div class="h-48 overflow-hidden relative">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Dining OS SaaS Solution dashboard" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzsbL8NOF6XMlZO3J5EvvbgOhxjFtHVfHQhrPUvw-PRUK4S5LcZIU4RrNV6hno66o02-3YO0QNODtmLAUP3Ew6y8CawTEwiUSmcxHcuZ_HAihigghgJNzie1cCaCwGVv6MhHUT6yXRf-Mpmp7OPrzu_lsPv5PGDSVe7snuBWq4BQVBUKRBENKFZ9iHB0tG_dbj4wVbPC_QMfxCtR4i6kFhChmFCxUz9zMFRUKsTs0nR6oSOti5KLCu"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+</div>
+<div class="p-6 flex-grow flex flex-col justify-between bg-white">
+<div>
+<h3 class="font-headline-lg text-headline-lg-mobile text-primary mb-2">Dining OS (SaaS Solution)</h3>
+<p class="font-body-md text-body-md text-secondary">The technology infrastructure for modern workplace dining. Enable contactless ordering, subsidy management, and real-time analytics.</p>
+</div>
+<div class="mt-4 flex justify-between items-center">
+<span class="material-symbols-outlined text-action-lime" data-icon="terminal">terminal</span>
+<span class="text-action-lime font-label-md text-[12px] opacity-0 group-hover:opacity-100 transition-opacity">Learn More →</span>
+</div>
+</div>
+</a>
+<!-- Service 3 -->
+<a class="bg-white rounded-2xl border border-slate-muted overflow-hidden card-hover group cursor-pointer flex flex-col animate-on-scroll fade-in-up delay-200" href="EventGiftingService.html">
+<div class="h-48 overflow-hidden relative">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="An elegant corporate event catering setup. A long table filled with beautifully arranged appetizers, charcuterie boards, and small bites in a modern office space with large windows overlooking a city skyline." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiJVlHyglrJMXp-9KDwCH5h1C06_ea20SmNOvFNwNNHOFaPXUzZFfCB4XYj8cTzw-uqR10g-sTQDTbj9Rj7xA9i-809LTZvOx_lkFFQqEetzMTcWbjaYmn24Y7OpYvS55GdvkiPL0G2Rqs_7xTlNGiWXna_uGPODpaznCRYo8iP0xyyrQLF9YChwzba0weZT9xwJsnOkSj9NChv-Oo_uqcFv124l1pQBszcYDhyQPro1Rh_11yaiM4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+</div>
+<div class="p-6 flex-grow flex flex-col justify-between bg-white">
+<div>
+<h3 class="font-headline-lg text-headline-lg-mobile text-primary mb-2">Events &amp; Gifting</h3>
+<p class="font-body-md text-body-md text-secondary">Elevate your corporate gatherings with premium catering. From board meetings to company-wide celebrations, we deliver exceptional culinary experiences.</p>
+</div>
+<div class="mt-4 flex justify-between items-center">
+<span class="material-symbols-outlined text-action-lime" data-icon="celebration">celebration</span>
+<span class="text-action-lime font-label-md text-[12px] opacity-0 group-hover:opacity-100 transition-opacity">Learn More →</span>
+</div>
+</div>
+</a>
+<!-- Service 4 -->
+<a class="bg-white rounded-2xl border border-slate-muted overflow-hidden card-hover group cursor-pointer flex flex-col animate-on-scroll fade-in-up" href="PantryService.html">
+<div class="h-48 overflow-hidden relative">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A modern office pantry area featuring sleek dark cabinets, a high-end espresso machine, glass-front refrigerators stocked with healthy beverages, and a clean white countertop with fresh fruit." src="https://lh3.googleusercontent.com/aida/AP1WRLvsrG1w0fs7hOjXHFbf2NXQ4sliKUCmVqp1D4O83IHRnSGqGjh3jqYff98PM9yu97PPWaA5hsR0Rp_BdOoWNcaMmI4CdbnfnP-OGG7B7ZM-l8mMtBtfLapLst-UcOQohpcmP5kylw5Nr3ZVjHof_HJmB7JsSoY1wpCJpLtER6CnL9-zTxoS-xDohKNfWjLOTiL81DxIwY54zJ_wAbrScuCMaI00zDe46qJYyv9Z793ZVI2b9WCiu6YXEF4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+</div>
+<div class="p-6 flex-grow flex flex-col justify-between bg-white">
+<div>
+<h3 class="font-headline-lg text-headline-lg-mobile text-primary mb-2">Pantry Services</h3>
+<p class="font-body-md text-body-md text-secondary">Keep your team fueled and focused. We stock your office pantries with curated, high-quality snacks, fresh fruit, and premium beverage solutions.</p>
+</div>
+<div class="mt-4 flex justify-between items-center">
+<span class="material-symbols-outlined text-action-lime" data-icon="local_cafe">local_cafe</span>
+<span class="text-action-lime font-label-md text-[12px] opacity-0 group-hover:opacity-100 transition-opacity">Learn More →</span>
+</div>
+</div>
+</a>
+<!-- Service 5 -->
+<div class="md:col-span-2 lg:col-span-2 bg-forest-deep rounded-2xl border border-forest-deep overflow-hidden card-hover group cursor-pointer flex flex-col justify-center items-center text-center p-8 relative animate-on-scroll fade-in-up delay-100 is-visible">
+<div class="absolute inset-0 opacity-10 bg-[url('placeholder')] bg-cover bg-center" data-alt="Abstract subtle geometric pattern in dark green and lime to add texture to the dark background card."></div>
+<div class="relative z-10">
+<div class="w-16 h-16 rounded-full bg-action-lime/20 flex items-center justify-center mx-auto mb-4">
+<span class="material-symbols-outlined text-action-lime text-3xl" data-icon="tune">tune</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-white mb-2">Customized Food Solutions</h3>
+<p class="font-body-md text-body-md text-cream-soft/80 mb-6 max-w-2xl mx-auto">Need something tailored? We build bespoke dining programs designed specifically for your unique organizational culture and dietary requirements.</p>
+<a class="inline-flex items-center text-action-lime font-label-md text-label-md hover:text-tertiary-fixed transition-colors smooth-scroll" href="#contact">
+                                Discuss Custom Plans <span class="material-symbols-outlined ml-1 text-sm" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section><section class="py-24 md:py-32 bg-surface-container-low" id="saas-solution">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="mb-16 md:mb-24 text-center max-w-4xl mx-auto animate-on-scroll fade-in-up is-visible">
+<span class="text-action-lime font-label-md text-label-md uppercase tracking-widest mb-4 block">SAAS SOLUTION</span>
+<h2 class="font-display-lg text-headline-lg-mobile md:text-display-lg text-primary mb-6">Power Your Cafeteria With Smarter Technology.</h2>
+<p class="font-body-lg text-body-lg text-secondary">From employee ordering and digital payments to cafeteria operations, vendor management and real-time insights, Foodify brings your entire workplace dining ecosystem onto one intelligent platform.</p>
+</div>
+<!-- Main Visual -->
+<a class="block mb-24 rounded-3xl overflow-hidden shadow-xl border border-slate-muted bg-white p-4 md:p-8 animate-on-scroll fade-in-up is-visible hover:shadow-2xl transition-shadow cursor-pointer" href="FoodifyApp.html">
+<img alt="Foodify Dining OS Dashboard Mockup" class="w-full h-auto rounded-2xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_HtWLlt8fabeW4-ykrWPeUE9TFvN0tY84X7_uG_RADBj3QrI8c1U2rtDVrPcSfHUoxbYHT-NGIZzoGXMV9zOCmiwlYkpnmx6LPSC7WKM5ZdP_sJqZiwIf1lJ9QxRMNrwkFL1RAXcelDtiepGKcASBWyx27f6HbX2KCKoBl8npR-6H1-LcGd4EUdPk6MaJ_sBQr4DunDWa9hIIbHRF6-bEO2ZKI3Aez_KWVd0qB1GTRqr41Tuwk8TS"/>
+</a>
+<!-- Feature Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-24">
+<div class="bg-white p-8 rounded-2xl border border-slate-muted card-hover animate-on-scroll fade-in-up is-visible">
+<span class="material-symbols-outlined text-action-lime mb-4 text-3xl" data-icon="smartphone">smartphone</span>
+<h3 class="font-headline-lg text-[20px] font-semibold text-primary mb-2">Employee Ordering</h3>
+<p class="font-body-md text-body-md text-secondary">Mobile-first ordering experience for busy professionals.</p>
+</div>
+<a class="block bg-white p-8 rounded-2xl border border-slate-muted card-hover animate-on-scroll fade-in-up delay-100 is-visible cursor-pointer" href="FoodifyApp.html">
+<span class="material-symbols-outlined text-action-lime mb-4 text-3xl" data-icon="payments">payments</span>
+<h3 class="font-headline-lg text-[20px] font-semibold text-primary mb-2">Digital Payments</h3>
+<p class="font-body-md text-body-md text-secondary">Seamless subsidy management and cashless transactions.</p>
+</a>
+<div class="bg-white p-8 rounded-2xl border border-slate-muted card-hover animate-on-scroll fade-in-up delay-200 is-visible">
+<span class="material-symbols-outlined text-action-lime mb-4 text-3xl" data-icon="inventory_2">inventory_2</span>
+<h3 class="font-headline-lg text-[20px] font-semibold text-primary mb-2">Cafeteria Management</h3>
+<p class="font-body-md text-body-md text-secondary">Optimize kitchen workflows and inventory tracking.</p>
+</div>
+<div class="bg-white p-8 rounded-2xl border border-slate-muted card-hover animate-on-scroll fade-in-up is-visible">
+<span class="material-symbols-outlined text-action-lime mb-4 text-3xl" data-icon="handshake">handshake</span>
+<h3 class="font-headline-lg text-[20px] font-semibold text-primary mb-2">Vendor Management</h3>
+<p class="font-body-md text-body-md text-secondary">Centralized control for multiple food service providers.</p>
+</div>
+<div class="bg-white p-8 rounded-2xl border border-slate-muted card-hover animate-on-scroll fade-in-up delay-100 is-visible">
+<span class="material-symbols-outlined text-action-lime mb-4 text-3xl" data-icon="monitoring">monitoring</span>
+<h3 class="font-headline-lg text-[20px] font-semibold text-primary mb-2">Analytics &amp; Insights</h3>
+<p class="font-body-md text-body-md text-secondary">Data-driven decisions with real-time performance metrics.</p>
+</div>
+<div class="bg-white p-8 rounded-2xl border border-slate-muted card-hover animate-on-scroll fade-in-up delay-200 is-visible">
+<span class="material-symbols-outlined text-action-lime mb-4 text-3xl" data-icon="reviews">reviews</span>
+<h3 class="font-headline-lg text-[20px] font-semibold text-primary mb-2">Feedback &amp; Engagement</h3>
+<p class="font-body-md text-body-md text-secondary">Direct communication channel with your diners.</p>
+</div>
+</div>
+<!-- Ecosystem Visual -->
+<div class="bg-forest-deep rounded-3xl p-12 mb-24 text-center animate-on-scroll fade-in-up is-visible">
+<h3 class="text-white font-headline-lg mb-12">The Foodify Ecosystem</h3>
+<div class="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16">
+<div class="flex flex-col items-center">
+<div class="w-20 h-20 rounded-full bg-white/10 flex items-center justify-center mb-4 border border-white/20">
+<span class="material-symbols-outlined text-white text-3xl" data-icon="groups">groups</span>
+</div>
+<span class="text-cream-soft font-label-md">Employees</span>
+</div>
+<span class="material-symbols-outlined text-action-lime hidden md:block" data-icon="arrow_forward">arrow_forward</span>
+<div class="flex flex-col items-center">
+<div class="w-32 h-32 rounded-full bg-action-lime flex items-center justify-center mb-4 shadow-lg shadow-action-lime/20">
+<span class="material-symbols-outlined text-forest-deep text-5xl" data-icon="hub">hub</span>
+</div>
+<span class="text-action-lime font-bold font-label-md">Foodify Platform</span>
+</div>
+<span class="material-symbols-outlined text-action-lime hidden md:block" data-icon="arrow_forward">arrow_forward</span>
+<div class="flex flex-wrap justify-center gap-8">
+<div class="flex flex-col items-center">
+<div class="w-20 h-20 rounded-full bg-white/10 flex items-center justify-center mb-4 border border-white/20">
+<span class="material-symbols-outlined text-white text-3xl" data-icon="admin_panel_settings">admin_panel_settings</span>
+</div>
+<span class="text-cream-soft font-label-md">Company Admin</span>
+</div>
+<div class="flex flex-col items-center">
+<div class="w-20 h-20 rounded-full bg-white/10 flex items-center justify-center mb-4 border border-white/20">
+<span class="material-symbols-outlined text-white text-3xl" data-icon="restaurant">restaurant</span>
+</div>
+<span class="text-cream-soft font-label-md">Cafeteria</span>
+</div>
+<div class="flex flex-col items-center">
+<div class="w-20 h-20 rounded-full bg-white/10 flex items-center justify-center mb-4 border border-white/20">
+<span class="material-symbols-outlined text-white text-3xl" data-icon="storefront">storefront</span>
+</div>
+<span class="text-cream-soft font-label-md">Vendors</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Benefits Row & CTA -->
+<div class="flex flex-col md:flex-row justify-between items-center gap-12 animate-on-scroll fade-in-up is-visible">
+<div class="flex flex-wrap justify-center md:justify-start gap-8 md:gap-16">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-action-lime" data-icon="check_circle">check_circle</span>
+<span class="font-label-md text-primary font-bold">One Platform</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-action-lime" data-icon="check_circle">check_circle</span>
+<span class="font-label-md text-primary font-bold">Real-Time Visibility</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-action-lime" data-icon="check_circle">check_circle</span>
+<span class="font-label-md text-primary font-bold">Built to Scale</span>
+</div>
+</div>
+<a class="inline-flex items-center justify-center bg-forest-deep text-action-lime px-10 py-4 rounded-full font-label-md text-label-md font-bold hover:bg-black transition-all hover:scale-105 smooth-scroll" href="#contact">
+                See Foodify in Action
+                <span class="material-symbols-outlined ml-2 text-sm" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Sectors Section -->
+<section class="py-24 md:py-32 bg-white" id="sectors">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="mb-16 md:mb-24 text-center max-w-4xl mx-auto animate-on-scroll fade-in-up is-visible">
+<span class="text-secondary font-label-md text-label-md uppercase tracking-widest mb-4 block">Sectors We Serve</span>
+<h2 class="font-display-lg text-headline-lg-mobile md:text-display-lg text-primary">Tailored solutions for diverse environments.</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Sector 1 -->
+<a class="text-center animate-on-scroll fade-in-up group block" href="CoporateSector.html">
+<div class="h-64 rounded-2xl overflow-hidden mb-6 border border-transparent group-hover:border-action-lime transition-all">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Corporate dining" src="https://lh3.googleusercontent.com/aida/AP1WRLssRayrgm6eGwmhj90dN2YfGt451_PX2XPhOtyEvOZsJqukUEuODKdMyGPNnepPlPhjmE53-5-2L6C3vHy2CL_EU92ERv4LD4Jzwhgf5XBQyCcdyr-jX530m6IjlEVMC-TaRLY5wjBVPZRk74LH9bQ5vjWzkZTDVMbbGFj6-FzRVN4d-YoQ8xdSJwNAiFG6Ou8cYhVf6toZ0Fe3rOIAuYuS0UbKCjxZqLh8q8Y5fWOrPhRDdQDu7Jsgyx8"/>
+</div>
+<h3 class="font-headline-lg text-headline-lg-mobile text-primary mb-3 group-hover:text-action-lime transition-colors">Corporate</h3>
+<p class="font-body-md text-body-md text-secondary">Complete transparency, oversight, and Employee Entitlement Controls for subsidies/reimbursements.</p>
+</a>
+<!-- Sector 2 -->
+<a class="text-center animate-on-scroll fade-in-up delay-100 group block" href="EducationSector.html">
+<div class="h-64 rounded-2xl overflow-hidden mb-6 border border-transparent group-hover:border-action-lime transition-all">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Education dining" src="https://lh3.googleusercontent.com/aida/AP1WRLvsrG1w0fs7hOjXHFbf2NXQ4sliKUCmVqp1D4O83IHRnSGqGjh3jqYff98PM9yu97PPWaA5hsR0Rp_BdOoWNcaMmI4CdbnfnP-OGG7B7ZM-l8mMtBtfLapLst-UcOQohpcmP5kylw5Nr3ZVjHof_HJmB7JsSoY1wpCJpLtER6CnL9-zTxoS-xDohKNfWjLOTiL81DxIwY54zJ_wAbrScuCMaI00zDe46qJYyv9Z793ZVI2b9WCiu6YXEF4"/>
+</div>
+<h3 class="font-headline-lg text-headline-lg-mobile text-primary mb-3 group-hover:text-action-lime transition-colors">Education</h3>
+<p class="font-body-md text-body-md text-secondary">Diverse cuisines, Regional Culinary Excellence, and healthy food choices for campuses.</p>
+</a>
+<!-- Sector 3 -->
+<a class="text-center animate-on-scroll fade-in-up delay-200 group block" href="HealthcareSector.html">
+<div class="h-64 rounded-2xl overflow-hidden mb-6 border border-transparent group-hover:border-action-lime transition-all">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Healthcare dining" src="https://lh3.googleusercontent.com/aida/AP1WRLuHoDgalTDKdsGGRXLHepLveut10ZpjoK2hU73psClRHemWjmeWbOywU0gJcd8Ao_uGbLE5AId-HQRr1wlavqzGcT46PkaE60p9zu3Ko1l1xIoVacTi7mF7cNdHv6oVvEFd8AJ2BXLArCwhY7DdVHfHUyvFEDgwqYRtsRKOq5shsgdUv6f2Z17DepVkIt6n4xMqhfdjBDYandXZ7-4n3LJFLorzOvNsYr2mp2TDgQQyeMvuea7qzjKYkQ"/>
+</div>
+<h3 class="font-headline-lg text-headline-lg-mobile text-primary mb-3 group-hover:text-action-lime transition-colors">Healthcare</h3>
+<p class="font-body-md text-body-md text-secondary">Patient, visitor, and staff dining with nutrition-first management.</p>
+</a>
+</div>
+</div>
+</section>
+<!-- Clients Section -->
+<section class="py-16 md:py-24 bg-surface animate-on-scroll fade-in-up is-visible" id="clients">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center">
+<span class="text-secondary font-label-md text-label-md uppercase tracking-widest mb-10 block">Trusted by Industry Leaders</span>
+<div class="flex flex-wrap justify-center items-center gap-10 md:gap-16 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+<span class="font-display-lg text-2xl md:text-3xl font-bold text-primary">ACME Corp</span>
+<span class="font-display-lg text-2xl md:text-3xl font-bold text-primary">Globex</span>
+<span class="font-display-lg text-2xl md:text-3xl font-bold text-primary">Soylent</span>
+<span class="font-display-lg text-2xl md:text-3xl font-bold text-primary">Initech</span>
+<span class="font-display-lg text-2xl md:text-3xl font-bold text-primary">Stark Industries</span>
+</div>
+</div>
+</section>
+<!-- Why Foodify Section -->
+<section class="py-24 md:py-32 bg-surface-container-low" id="why-us">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="mb-16 md:mb-24 text-center max-w-4xl mx-auto animate-on-scroll fade-in-up is-visible">
+<span class="text-secondary font-label-md text-label-md uppercase tracking-widest mb-4 block">Why Foodify</span>
+<h2 class="font-display-lg text-headline-lg-mobile md:text-display-lg text-primary">The smart choice for modern workplace dining.</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+<div class="bg-white p-8 rounded-2xl border border-slate-muted animate-on-scroll fade-in-up is-visible">
+<div class="w-12 h-12 rounded-full bg-action-lime/20 flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-action-lime" data-icon="visibility">visibility</span>
+</div>
+<h3 class="font-headline-lg text-[20px] font-semibold text-primary mb-3">Transparency &amp; Oversight</h3>
+<p class="font-body-md text-body-md text-secondary">Full visibility into dining operations, subsidies, and vendor performance through our OS.</p>
+</div>
+<div class="bg-white p-8 rounded-2xl border border-slate-muted animate-on-scroll fade-in-up delay-100 is-visible">
+<div class="w-12 h-12 rounded-full bg-action-lime/20 flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-action-lime" data-icon="mood">mood</span>
+</div>
+<h3 class="font-headline-lg text-[20px] font-semibold text-primary mb-3">Employee Satisfaction</h3>
+<p class="font-body-md text-body-md text-secondary">Diverse, high-quality food options tailored to employee preferences and dietary needs.</p>
+</div>
+<div class="bg-white p-8 rounded-2xl border border-slate-muted animate-on-scroll fade-in-up delay-200 is-visible">
+<div class="w-12 h-12 rounded-full bg-action-lime/20 flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-action-lime" data-icon="speed">speed</span>
+</div>
+<h3 class="font-headline-lg text-[20px] font-semibold text-primary mb-3">Operational Efficiency</h3>
+<p class="font-body-md text-body-md text-secondary">Streamlined processes, reduced waste, and optimized staffing for better ROI.</p>
+</div>
+<div class="bg-white p-8 rounded-2xl border border-slate-muted animate-on-scroll fade-in-up delay-300 is-visible">
+<div class="w-12 h-12 rounded-full bg-action-lime/20 flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-action-lime" data-icon="memory">memory</span>
+</div>
+<h3 class="font-headline-lg text-[20px] font-semibold text-primary mb-3">Scalable Technology</h3>
+<p class="font-body-md text-body-md text-secondary">Our Dining OS grows with you, from single offices to multi-campus deployments.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials Section -->
+<section class="py-24 md:py-32 bg-paper-surface" id="testimonials">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="mb-16 md:mb-24 text-center max-w-4xl mx-auto animate-on-scroll fade-in-up is-visible">
+<span class="text-secondary font-label-md text-label-md uppercase tracking-widest mb-4 block">Customer Testimonials</span>
+<h2 class="font-display-lg text-headline-lg-mobile md:text-display-lg text-primary">Hear from those who know best.</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Testimonial 1 -->
+<div class="bg-white p-8 rounded-2xl border border-slate-muted flex flex-col justify-between shadow-sm animate-on-scroll fade-in-up is-visible">
+<div>
+<div class="flex text-action-lime mb-6">
+<span class="material-symbols-outlined" data-icon="star">star</span>
+<span class="material-symbols-outlined" data-icon="star">star</span>
+<span class="material-symbols-outlined" data-icon="star">star</span>
+<span class="material-symbols-outlined" data-icon="star">star</span>
+<span class="material-symbols-outlined" data-icon="star">star</span>
+</div>
+<p class="font-body-lg text-body-lg text-secondary mb-8">"Foodify completely transformed our campus dining. The transition to their Dining OS streamlined our subsidy tracking overnight, and employee satisfaction has never been higher."</p>
+</div>
+<div>
+<p class="font-headline-lg text-[20px] text-primary font-bold">Sarah Jenkins</p>
+<p class="font-label-md text-label-md text-secondary mt-1">Facility Manager, Globex</p>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="bg-white p-8 rounded-2xl border border-slate-muted flex flex-col justify-between shadow-sm animate-on-scroll fade-in-up delay-100 is-visible">
+<div>
+<div class="flex text-action-lime mb-6">
+<span class="material-symbols-outlined" data-icon="star">star</span>
+<span class="material-symbols-outlined" data-icon="star">star</span>
+<span class="material-symbols-outlined" data-icon="star">star</span>
+<span class="material-symbols-outlined" data-icon="star">star</span>
+<span class="material-symbols-outlined" data-icon="star">star</span>
+</div>
+<p class="font-body-lg text-body-lg text-secondary mb-8">"The quality of the food and the seamless tech integration make Foodify a unique partner. Our recruitment and retention metrics improved simply by upgrading our corporate cafeteria experience."</p>
+</div>
+<div>
+<p class="font-headline-lg text-[20px] text-primary font-bold">David Chen</p>
+<p class="font-label-md text-label-md text-secondary mt-1">HR Director, Initech</p>
+</div>
+</div>
+<!-- Testimonial 3 -->
+<div class="bg-white p-8 rounded-2xl border border-slate-muted flex flex-col justify-between shadow-sm animate-on-scroll fade-in-up delay-200 is-visible">
+<div>
+<div class="flex text-action-lime mb-6">
+<span class="material-symbols-outlined" data-icon="star">star</span>
+<span class="material-symbols-outlined" data-icon="star">star</span>
+<span class="material-symbols-outlined" data-icon="star">star</span>
+<span class="material-symbols-outlined" data-icon="star">star</span>
+<span class="material-symbols-outlined" data-icon="star">star</span>
+</div>
+<p class="font-body-lg text-body-lg text-secondary mb-8">"Working with the Foodify team has elevated our culinary offerings. The platform allows us to manage inventory precisely and offer tailored nutritional options that our teams genuinely love."</p>
+</div>
+<div>
+<p class="font-headline-lg text-[20px] text-primary font-bold">Marcus Thorne</p>
+<p class="font-label-md text-label-md text-secondary mt-1">Corporate Chef, Stark Industries</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Stats Strip Section -->
+<section class="py-12 md:py-16 bg-surface-container-low animate-on-scroll fade-in-up is-visible" id="stats">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<!-- Trust Strip -->
+<div class="bg-forest-deep rounded-2xl p-8 md:p-12 flex flex-wrap justify-around items-center gap-8">
+<div class="text-center">
+<p class="font-display-lg text-4xl md:text-5xl text-action-lime font-bold mb-2">10K+</p>
+<p class="font-label-md text-label-md text-cream-soft uppercase tracking-wider">Meals Served Daily</p>
+</div>
+<div class="text-center">
+<p class="font-display-lg text-4xl md:text-5xl text-action-lime font-bold mb-2">50+</p>
+<p class="font-label-md text-label-md text-cream-soft uppercase tracking-wider">Workplaces</p>
+</div>
+<div class="text-center">
+<p class="font-display-lg text-4xl md:text-5xl text-action-lime font-bold mb-2">98%</p>
+<p class="font-label-md text-label-md text-cream-soft uppercase tracking-wider">Client Retention</p>
+</div>
+<div class="text-center">
+<p class="font-display-lg text-4xl md:text-5xl text-action-lime font-bold mb-2">24/7</p>
+<p class="font-label-md text-label-md text-cream-soft uppercase tracking-wider">Support</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-24 md:py-32 bg-surface" id="contact">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+<!-- Left Column -->
+<div class="animate-on-scroll fade-in-up is-visible">
+<h2 class="font-display-xl text-[48px] md:text-[64px] text-primary mb-6 tracking-tight leading-tight">
+                            Partner with Foodify
+                        </h2>
+<p class="font-body-lg text-body-lg text-secondary mb-12">
+                            Ready to elevate your workplace culinary standards? Let's discuss a tailored solution for your organization.
+                        </p>
+<div class="rounded-3xl overflow-hidden shadow-lg aspect-[4/3] border-[8px] border-white/50 relative">
+<img class="w-full h-full object-cover" data-alt="Two professionals using a tablet in a modern corporate cafeteria" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiCOMXzBDkauUs6kFIid8bivLAM_6KxJt-PYRcMFLThgfyGx0PmrGpK5eolLcVq_zQoLBp0LOmioiEn5FYIs8GHFhBWpeervfhHj-oEvJydvs3Dvcu238KPwZm6dzfrXnex4MjivWJXhFWNjzCsnWXxJfQiHb-qdmXI9esIxGcWj4_JGiCqagCbqc3Df5hgDln2zAqWURMSij_NO7SmtFlm9-Co2YvTXJtskErBI5HehviUD5Q5HgY"/>
+</div>
+</div>
+<!-- Right Column (Form) -->
+<div class="bg-white rounded-[2rem] p-6 md:p-10 border border-slate-muted shadow-sm animate-on-scroll fade-in-up delay-100 is-visible">
+<!-- Tabs -->
+<div class="flex flex-wrap gap-3 mb-10" id="form-tabs">
+<button type="button" class="form-tab px-6 py-2.5 rounded-full border border-forest-deep bg-action-lime text-forest-deep font-label-md text-[14px] font-bold shadow-sm transition-transform hover:scale-105" data-value="Enterprises">Enterprises</button>
+<button type="button" class="form-tab px-6 py-2.5 rounded-full border border-outline-variant bg-surface text-secondary font-label-md text-[14px] shadow-sm transition-transform hover:scale-105" data-value="Food Vendors">Food Vendors</button>
+<button type="button" class="form-tab px-6 py-2.5 rounded-full border border-outline-variant bg-surface text-secondary font-label-md text-[14px] shadow-sm transition-transform hover:scale-105" data-value="App Support">App Support</button>
+</div>
+<input id="form-interest" name="interest" type="hidden" value="Enterprises"/>
+<form id="contact-form" class="space-y-6" novalidate>
+<input id="form-name" name="name" class="w-full px-5 py-4 rounded-xl border border-outline-variant focus:border-action-lime focus:ring-1 focus:ring-action-lime outline-none transition-colors bg-surface-bright font-body-md text-primary" placeholder="Full Name" type="text" required/>
+<input id="form-email" name="email" class="w-full px-5 py-4 rounded-xl border border-outline-variant focus:border-action-lime focus:ring-1 focus:ring-action-lime outline-none transition-colors bg-surface-bright font-body-md text-primary" placeholder="Work Email" type="email" required/>
+<input id="form-organization" name="organization" class="w-full px-5 py-4 rounded-xl border border-outline-variant focus:border-action-lime focus:ring-1 focus:ring-action-lime outline-none transition-colors bg-surface-bright font-body-md text-primary" placeholder="Organization Name" type="text" required/>
+<div class="relative">
+<select id="form-industry" name="industry" class="w-full px-5 py-4 rounded-xl border border-outline-variant focus:border-action-lime focus:ring-1 focus:ring-action-lime outline-none transition-colors appearance-none bg-surface-bright font-body-md text-primary cursor-pointer" required>
+<option disabled="" selected="" value="">Select Your Industry</option>
+<option>Corporate</option>
+<option>Education</option>
+<option>Healthcare</option>
+<option>Other</option>
+</select>
+<div class="absolute right-4 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-surface-container flex items-center justify-center pointer-events-none">
+<span class="material-symbols-outlined text-primary text-sm font-bold" data-icon="keyboard_arrow_down">keyboard_arrow_down</span>
+</div>
+</div>
+<textarea id="form-message" name="message" class="w-full px-5 py-4 rounded-xl border border-outline-variant focus:border-action-lime focus:ring-1 focus:ring-action-lime outline-none transition-colors bg-surface-bright font-body-md text-primary resize-none h-32" placeholder="How can we help?" required></textarea>
+<input id="form-website" name="website" class="hidden" tabindex="-1" autocomplete="off" type="text"/>
+<div id="form-status" class="hidden rounded-xl px-5 py-4 font-body-md text-body-md"></div>
+<button id="form-submit" class="w-full bg-forest-deep text-action-lime px-8 py-4 rounded-xl font-label-md text-label-md font-bold hover:bg-black transition-colors flex items-center justify-center gap-2" type="submit">
+<span id="form-submit-label">Start the Conversation</span> <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Site Footer (Shared) -->
+<footer class="bg-forest-deep w-full pt-16 pb-8 md:pt-24 border-t border-secondary/20">
+<div class="flex flex-col md:flex-row justify-between items-start px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto gap-12">
+<div class="md:max-w-xs">
+<a href="Index.html"><span class="font-display-lg text-headline-lg text-action-lime mb-4 block font-bold tracking-tighter">Foodify</span></a>
+<p class="font-body-md text-body-md text-cream-soft mb-8">Intelligence meets Food. Elevating the modern workplace dining experience.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full border border-secondary/40 flex items-center justify-center text-cream-soft hover:border-action-lime hover:text-action-lime transition-colors" href="Contact.html" aria-label="Contact"><span class="material-symbols-outlined" data-icon="mail">mail</span></a>
+<a class="w-10 h-10 rounded-full border border-secondary/40 flex items-center justify-center text-cream-soft hover:border-action-lime hover:text-action-lime transition-colors" href="About.html" aria-label="About"><span class="material-symbols-outlined" data-icon="info">info</span></a>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 flex-1">
+<div>
+<h4 class="font-label-md text-label-md text-white mb-6 uppercase tracking-wider">Solutions</h4>
+<ul class="space-y-4">
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-action-lime transition-colors" href="CafeteriaManaged.html">Cafeteria Managed</a></li>
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-action-lime transition-colors" href="FoodifyApp.html">Dining OS</a></li>
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-action-lime transition-colors" href="EventGiftingService.html">Events &amp; Gifting</a></li>
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-action-lime transition-colors" href="PantryService.html">Pantry Services</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-white mb-6 uppercase tracking-wider">Sectors</h4>
+<ul class="space-y-4">
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-action-lime transition-colors" href="CoporateSector.html">Corporate</a></li>
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-action-lime transition-colors" href="EducationSector.html">Education</a></li>
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-action-lime transition-colors" href="HealthcareSector.html">Healthcare</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-white mb-6 uppercase tracking-wider">Company</h4>
+<ul class="space-y-4">
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-action-lime transition-colors" href="About.html">About</a></li>
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-action-lime transition-colors" href="CaseStudies.html">Case Studies</a></li>
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-action-lime transition-colors" href="Contact.html">Contact</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-white mb-6 uppercase tracking-wider">Legal</h4>
+<ul class="space-y-4">
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-action-lime transition-colors" href="PrivacyPolicy.html">Privacy Policy</a></li>
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-action-lime transition-colors" href="TermsOfService.html">Terms of Service</a></li>
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-action-lime transition-colors" href="Sustainability.html">Sustainability</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="mt-16 md:mt-24 pt-8 border-t border-secondary/20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto text-center md:text-left">
+<p class="font-body-md text-body-md text-secondary-fixed-dim">© 2025 Foodify Culinary Solutions. Intelligence meets Food.</p>
+</div>
+</footer>
+<script>
+        (function () {
+            var FORM_ENDPOINT = 'https://script.google.com/macros/s/AKfycbzFasqGkt2NfU--WddaSj5JWesGEOWmFsugmaqlFIpZwJc4ZEHKWf_eUThp7hvwhtEN/exec';
+            var form = document.getElementById('contact-form');
+            if (!form) return;
+            var status = document.getElementById('form-status');
+            var submitBtn = document.getElementById('form-submit');
+            var label = document.getElementById('form-submit-label');
+            var originalLabel = label.textContent;
+            var requiredFields = ['form-name', 'form-email', 'form-organization', 'form-industry', 'form-message'];
+            function showStatus(msg, type) {
+                status.textContent = msg;
+                status.classList.remove('hidden', 'bg-action-lime/10', 'text-forest-deep', 'border', 'border-action-lime', 'bg-red-50', 'text-red-600', 'border-red-200');
+                if (type === 'success') {
+                    status.classList.add('bg-action-lime/10', 'text-forest-deep', 'border', 'border-action-lime');
+                } else {
+                    status.classList.add('bg-red-50', 'text-red-600', 'border', 'border-red-200');
+                }
+            }
+            var tabs = document.querySelectorAll('.form-tab');
+            var interestInput = document.getElementById('form-interest');
+            function setTab(activeBtn) {
+                tabs.forEach(function (t) {
+                    var isActive = t === activeBtn;
+                    t.className = 'form-tab px-6 py-2.5 rounded-full font-label-md text-[14px] shadow-sm transition-transform hover:scale-105' + (isActive ? ' border border-forest-deep bg-action-lime text-forest-deep font-bold' : ' border border-outline-variant bg-surface text-secondary');
+                });
+                interestInput.value = activeBtn.getAttribute('data-value');
+            }
+            tabs.forEach(function (t) {
+                t.addEventListener('click', function () { setTab(t); });
+            });
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+                for (var i = 0; i < requiredFields.length; i++) {
+                    var el = document.getElementById(requiredFields[i]);
+                    if (!el.value || (el.id === 'form-email' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(el.value))) {
+                        el.focus();
+                        showStatus('Please fill in all fields with valid details.', 'error');
+                        return;
+                    }
+                }
+                if (document.getElementById('form-website').value) return;
+                var payload = {
+                    name: document.getElementById('form-name').value,
+                    email: document.getElementById('form-email').value,
+                    organization: document.getElementById('form-organization').value,
+                    industry: document.getElementById('form-industry').value,
+                    interest: interestInput.value,
+                    message: document.getElementById('form-message').value,
+                    source: window.location.pathname
+                };
+                submitBtn.disabled = true;
+                label.textContent = 'Sending...';
+                fetch(FORM_ENDPOINT, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                })
+                .then(function () {
+                    showStatus('Thank you! Your message has been sent — we will get back to you within 24 hours.', 'success');
+                    form.reset();
+                    setTab(tabs[0]);
+                })
+                .catch(function () {
+                    showStatus('Something went wrong. Please try again or email us directly.', 'error');
+                })
+                .finally(function () {
+                    submitBtn.disabled = false;
+                    label.textContent = originalLabel;
+                });
+            });
+        })();
+    </script>
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const toggle = document.getElementById('menu-toggle');
+            const menu = document.getElementById('mobile-menu');
+            if (toggle && menu) {
+                toggle.addEventListener('click', () => menu.classList.toggle('hidden'));
+            }
+        });
+    </script>
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Smooth Scrolling
+            document.querySelectorAll('a.smooth-scroll, a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    const href = this.getAttribute('href');
+                    if (href && href.startsWith('#') && href.length > 1) {
+                        const targetElement = document.querySelector(href);
+                        if (targetElement) {
+                            e.preventDefault();
+                            targetElement.scrollIntoView({
+                                behavior: 'smooth'
+                            });
+                        }
+                    }
+                });
+            });
+
+            // Intersection Observer for Entrance Animations
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.animate-on-scroll').forEach((el) => {
+                observer.observe(el);
+            });
+        });
+    </script>
+</body></html>

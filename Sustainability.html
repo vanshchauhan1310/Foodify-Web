@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sustainability | Foodify</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-fixed": "#1a1c1c",
+                    "tertiary": "#000000",
+                    "on-primary-fixed": "#1c1b1c",
+                    "outline-variant": "#c7c6ca",
+                    "on-surface-variant": "#46464a",
+                    "on-tertiary-fixed-variant": "#285000",
+                    "background": "#fbf9f8",
+                    "tertiary-fixed": "#96fc35",
+                    "primary-fixed-dim": "#c8c6c7",
+                    "surface-variant": "#e4e2e2",
+                    "outline": "#77777b",
+                    "surface-container-high": "#e9e8e7",
+                    "on-secondary": "#ffffff",
+                    "on-primary-fixed-variant": "#474647",
+                    "on-background": "#1b1c1c",
+                    "on-secondary-fixed-variant": "#454747",
+                    "inverse-on-surface": "#f2f0f0",
+                    "on-primary-container": "#858384",
+                    "tertiary-container": "#0d2000",
+                    "forest-deep": "#0F1A0F",
+                    "error": "#ba1a1a",
+                    "on-secondary-container": "#5f6161",
+                    "surface-container": "#efeded",
+                    "primary": "#000000",
+                    "surface-bright": "#fbf9f8",
+                    "on-tertiary-fixed": "#0d2000",
+                    "primary-container": "#1c1b1c",
+                    "surface-container-highest": "#e4e2e2",
+                    "surface-container-low": "#f5f3f3",
+                    "secondary-container": "#dcdddc",
+                    "on-surface": "#1b1c1c",
+                    "secondary-fixed": "#e2e2e2",
+                    "on-primary": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "slate-muted": "#E5E5E1",
+                    "inverse-primary": "#c8c6c7",
+                    "cream-soft": "#F4F4F0",
+                    "primary-fixed": "#e5e2e3",
+                    "inverse-surface": "#303031",
+                    "on-tertiary-container": "#509400",
+                    "on-tertiary": "#ffffff",
+                    "secondary-fixed-dim": "#c6c7c6",
+                    "surface-container-lowest": "#ffffff",
+                    "action-lime": "#94FA33",
+                    "surface": "#fbf9f8",
+                    "surface-dim": "#dbdad9",
+                    "surface-tint": "#5f5e5f",
+                    "on-error": "#ffffff",
+                    "tertiary-fixed-dim": "#7bde08",
+                    "paper-surface": "#F9F9F8",
+                    "on-error-container": "#93000a",
+                    "secondary": "#5d5f5e"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "2xl": "1rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "margin-mobile": "16px",
+                    "unit": "4px",
+                    "margin-desktop": "64px",
+                    "container-max": "1440px",
+                    "margin-tablet": "32px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Inter"],
+                    "label-md": ["Geist", "sans-serif"],
+                    "display-xl": ["Geist", "sans-serif"],
+                    "body-md": ["Inter"],
+                    "headline-lg-mobile": ["Geist", "sans-serif"],
+                    "display-lg": ["Geist", "sans-serif"],
+                    "headline-lg": ["Geist", "sans-serif"],
+                    "mono-sm": ["Geist", "monospace"]
+            },
+            "fontSize": {
+                    "body-lg": ["18px", {"lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "400"}],
+                    "label-md": ["13px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                    "display-xl": ["72px", {"lineHeight": "72px", "letterSpacing": "-0.04em", "fontWeight": "700"}],
+                    "body-md": ["15px", {"lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "52px", "letterSpacing": "-0.03em", "fontWeight": "700"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                    "mono-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0em", "fontWeight": "400"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        body {
+            background-color: #F9F9F8;
+            color: #000000;
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        h1, h2, h3, h4, h5, h6, .font-geist {
+            font-family: 'Geist', sans-serif;
+        }
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+        }
+    </style>
+</head>
+<body class="bg-paper-surface text-primary">
+<!-- Site Header (Shared) -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/30 transition-all duration-300">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20 max-w-container-max mx-auto">
+<a class="flex items-center gap-3 transition-transform hover:scale-105 active:scale-95 cursor-pointer" href="Index.html">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="restaurant">restaurant</span>
+<span class="font-display-lg text-headline-lg-mobile md:text-headline-lg font-bold text-primary tracking-tighter">Foodify</span>
+</a>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="text-secondary hover:text-primary transition-colors font-label-md text-label-md" href="Index.html#services">Services</a>
+<a class="text-secondary hover:text-primary transition-colors font-label-md text-label-md" href="Index.html#sectors">Sectors</a>
+<a class="text-secondary hover:text-primary transition-colors font-label-md text-label-md" href="FoodifyApp.html">Dining OS</a>
+<a class="text-secondary hover:text-primary transition-colors font-label-md text-label-md" href="About.html">About</a>
+</nav>
+<a class="bg-primary text-on-primary px-6 py-2 rounded-full font-label-md text-label-md hover:bg-forest-deep transition-colors hidden md:block" href="Contact.html">Get in Touch</a>
+<button class="md:hidden text-primary" id="menu-toggle">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+<div class="md:hidden hidden bg-surface/95 backdrop-blur-md border-t border-outline-variant/30 px-margin-mobile py-4" id="mobile-menu">
+<nav class="flex flex-col gap-2">
+<a class="px-4 py-3 rounded-xl font-label-md text-label-md text-secondary hover:bg-surface-container transition-colors" href="Index.html#services">Services</a>
+<a class="px-4 py-3 rounded-xl font-label-md text-label-md text-secondary hover:bg-surface-container transition-colors" href="Index.html#sectors">Sectors</a>
+<a class="px-4 py-3 rounded-xl font-label-md text-label-md text-secondary hover:bg-surface-container transition-colors" href="FoodifyApp.html">Dining OS</a>
+<a class="px-4 py-3 rounded-xl font-label-md text-label-md text-secondary hover:bg-surface-container transition-colors" href="About.html">About</a>
+<a class="mt-2 bg-primary text-on-primary text-center px-6 py-3 rounded-full font-label-md text-label-md" href="Contact.html">Get in Touch</a>
+</nav>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative pt-32 pb-24 md:pt-40 md:pb-32 overflow-hidden">
+<div class="absolute inset-0 z-0 bg-forest-deep">
+<div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#94FA33 1px, transparent 1px); background-size: 24px 24px;"></div>
+</div>
+<div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full text-center">
+<span class="inline-flex items-center gap-2 px-3 py-1 bg-action-lime/20 text-action-lime rounded-full mb-8 border border-action-lime/30 font-mono-sm text-mono-sm uppercase tracking-widest">Sustainability Report</span>
+<h1 class="font-display-xl text-display-lg md:text-display-xl text-white mb-6 tracking-tight leading-tight">Good food should be good for the planet.</h1>
+<p class="font-body-lg text-body-lg text-cream-soft/80 max-w-2xl mx-auto mb-10">We design dining programs that reduce waste, support local producers, and lower carbon footprints — without compromising on taste.</p>
+</div>
+</section>
+<!-- Stats -->
+<section class="py-24 bg-paper-surface">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="bg-white rounded-2xl border border-slate-muted p-8 md:p-12 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+<div><p class="font-display-lg text-4xl md:text-5xl text-action-lime font-bold mb-2">-35%</p><p class="font-label-md text-label-md text-secondary uppercase tracking-wider">Food Waste</p></div>
+<div><p class="font-display-lg text-4xl md:text-5xl text-action-lime font-bold mb-2">70%</p><p class="font-label-md text-label-md text-secondary uppercase tracking-wider">Local Sourcing</p></div>
+<div><p class="font-display-lg text-4xl md:text-5xl text-action-lime font-bold mb-2">100%</p><p class="font-label-md text-label-md text-secondary uppercase tracking-wider">Compostable Packaging</p></div>
+<div><p class="font-display-lg text-4xl md:text-5xl text-action-lime font-bold mb-2">-20%</p><p class="font-label-md text-label-md text-secondary uppercase tracking-wider">Carbon Footprint</p></div>
+</div>
+</div>
+</section>
+<!-- Initiatives -->
+<section class="pb-24 md:pb-32 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="mb-16 text-center max-w-4xl mx-auto">
+<span class="text-secondary font-label-md text-label-md uppercase tracking-widest mb-4 block">Our Initiatives</span>
+<h2 class="font-display-lg text-headline-lg-mobile md:text-display-lg text-primary">How we build sustainability into every meal.</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-white p-8 rounded-2xl border border-slate-muted card-hover">
+<div class="w-12 h-12 rounded-full bg-action-lime/20 flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-action-lime" data-icon="eco">eco</span>
+</div>
+<h3 class="font-headline-lg text-[20px] font-semibold text-primary mb-3">Local &amp; Seasonal</h3>
+<p class="font-body-md text-body-md text-secondary">Menus built around local farms and seasonal produce reduce food miles and support regional economies.</p>
+</div>
+<div class="bg-white p-8 rounded-2xl border border-slate-muted card-hover">
+<div class="w-12 h-12 rounded-full bg-action-lime/20 flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-action-lime" data-icon="delete_sweep">delete_sweep</span>
+</div>
+<h3 class="font-headline-lg text-[20px] font-semibold text-primary mb-3">Waste Reduction</h3>
+<p class="font-body-md text-body-md text-secondary">Predictive demand forecasting through the Dining OS minimizes overproduction and food waste by up to 35%.</p>
+</div>
+<div class="bg-white p-8 rounded-2xl border border-slate-muted card-hover">
+<div class="w-12 h-12 rounded-full bg-action-lime/20 flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-action-lime" data-icon="recycling">recycling</span>
+</div>
+<h3 class="font-headline-lg text-[20px] font-semibold text-primary mb-3">Circular Packaging</h3>
+<p class="font-body-md text-body-md text-secondary">Compostable packaging, bulk dispensers, and reusable serviceware across all managed cafeterias.</p>
+</div>
+<div class="bg-white p-8 rounded-2xl border border-slate-muted card-hover">
+<div class="w-12 h-12 rounded-full bg-action-lime/20 flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-action-lime" data-icon="nutrition">nutrition</span>
+</div>
+<h3 class="font-headline-lg text-[20px] font-semibold text-primary mb-3">Plant-Forward Menus</h3>
+<p class="font-body-md text-body-md text-secondary">A higher share of plant-based options that are delicious, nutritious, and significantly lighter on the planet.</p>
+</div>
+<div class="bg-white p-8 rounded-2xl border border-slate-muted card-hover">
+<div class="w-12 h-12 rounded-full bg-action-lime/20 flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-action-lime" data-icon="monitoring">monitoring</span>
+</div>
+<h3 class="font-headline-lg text-[20px] font-semibold text-primary mb-3">Carbon Tracking</h3>
+<p class="font-body-md text-body-md text-secondary">Real-time carbon impact reporting per meal, per outlet, and per quarter for complete transparency.</p>
+</div>
+<div class="bg-white p-8 rounded-2xl border border-slate-muted card-hover">
+<div class="w-12 h-12 rounded-full bg-action-lime/20 flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-action-lime" data-icon="volunteer_activism">volunteer_activism</span>
+</div>
+<h3 class="font-headline-lg text-[20px] font-semibold text-primary mb-3">Community Impact</h3>
+<p class="font-body-md text-body-md text-secondary">Surplus meal donations to local shelters and food banks through structured redistribution programs.</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Site Footer (Shared) -->
+<footer class="bg-forest-deep w-full pt-16 pb-8 md:pt-24 border-t border-secondary/20">
+<div class="flex flex-col md:flex-row justify-between items-start px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto gap-12">
+<div class="md:max-w-xs">
+<a href="Index.html"><span class="font-display-lg text-headline-lg text-action-lime mb-4 block font-bold tracking-tighter">Foodify</span></a>
+<p class="font-body-md text-body-md text-cream-soft mb-8">Intelligence meets Food. Elevating the modern workplace dining experience.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full border border-secondary/40 flex items-center justify-center text-cream-soft hover:border-action-lime hover:text-action-lime transition-colors" href="Contact.html" aria-label="Contact"><span class="material-symbols-outlined" data-icon="mail">mail</span></a>
+<a class="w-10 h-10 rounded-full border border-secondary/40 flex items-center justify-center text-cream-soft hover:border-action-lime hover:text-action-lime transition-colors" href="About.html" aria-label="About"><span class="material-symbols-outlined" data-icon="info">info</span></a>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 flex-1">
+<div>
+<h4 class="font-label-md text-label-md text-white mb-6 uppercase tracking-wider">Solutions</h4>
+<ul class="space-y-4">
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-action-lime transition-colors" href="CafeteriaManaged.html">Cafeteria Managed</a></li>
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-action-lime transition-colors" href="FoodifyApp.html">Dining OS</a></li>
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-action-lime transition-colors" href="EventGiftingService.html">Events &amp; Gifting</a></li>
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-action-lime transition-colors" href="PantryService.html">Pantry Services</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-white mb-6 uppercase tracking-wider">Sectors</h4>
+<ul class="space-y-4">
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-action-lime transition-colors" href="CoporateSector.html">Corporate</a></li>
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-action-lime transition-colors" href="EducationSector.html">Education</a></li>
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-action-lime transition-colors" href="HealthcareSector.html">Healthcare</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-white mb-6 uppercase tracking-wider">Company</h4>
+<ul class="space-y-4">
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-action-lime transition-colors" href="About.html">About</a></li>
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-action-lime transition-colors" href="CaseStudies.html">Case Studies</a></li>
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-action-lime transition-colors" href="Contact.html">Contact</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-white mb-6 uppercase tracking-wider">Legal</h4>
+<ul class="space-y-4">
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-action-lime transition-colors" href="PrivacyPolicy.html">Privacy Policy</a></li>
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-action-lime transition-colors" href="TermsOfService.html">Terms of Service</a></li>
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-action-lime transition-colors" href="Sustainability.html">Sustainability</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="mt-16 md:mt-24 pt-8 border-t border-secondary/20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto text-center md:text-left">
+<p class="font-body-md text-body-md text-secondary-fixed-dim">© 2025 Foodify Culinary Solutions. Intelligence meets Food.</p>
+</div>
+</footer>
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const toggle = document.getElementById('menu-toggle');
+            const menu = document.getElementById('mobile-menu');
+            if (toggle && menu) {
+                toggle.addEventListener('click', () => menu.classList.toggle('hidden'));
+            }
+        });
+    </script>
+</body></html>

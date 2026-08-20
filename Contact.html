@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact Us | Foodify</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-fixed": "#1a1c1c",
+                    "tertiary": "#000000",
+                    "on-primary-fixed": "#1c1b1c",
+                    "outline-variant": "#c7c6ca",
+                    "on-surface-variant": "#46464a",
+                    "on-tertiary-fixed-variant": "#285000",
+                    "background": "#fbf9f8",
+                    "tertiary-fixed": "#96fc35",
+                    "primary-fixed-dim": "#c8c6c7",
+                    "surface-variant": "#e4e2e2",
+                    "outline": "#77777b",
+                    "surface-container-high": "#e9e8e7",
+                    "on-secondary": "#ffffff",
+                    "on-primary-fixed-variant": "#474647",
+                    "on-background": "#1b1c1c",
+                    "on-secondary-fixed-variant": "#454747",
+                    "inverse-on-surface": "#f2f0f0",
+                    "on-primary-container": "#858384",
+                    "tertiary-container": "#0d2000",
+                    "forest-deep": "#0F1A0F",
+                    "error": "#ba1a1a",
+                    "on-secondary-container": "#5f6161",
+                    "surface-container": "#efeded",
+                    "primary": "#000000",
+                    "surface-bright": "#fbf9f8",
+                    "on-tertiary-fixed": "#0d2000",
+                    "primary-container": "#1c1b1c",
+                    "surface-container-highest": "#e4e2e2",
+                    "surface-container-low": "#f5f3f3",
+                    "secondary-container": "#dcdddc",
+                    "on-surface": "#1b1c1c",
+                    "secondary-fixed": "#e2e2e2",
+                    "on-primary": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "slate-muted": "#E5E5E1",
+                    "inverse-primary": "#c8c6c7",
+                    "cream-soft": "#F4F4F0",
+                    "primary-fixed": "#e5e2e3",
+                    "inverse-surface": "#303031",
+                    "on-tertiary-container": "#509400",
+                    "on-tertiary": "#ffffff",
+                    "secondary-fixed-dim": "#c6c7c6",
+                    "surface-container-lowest": "#ffffff",
+                    "action-lime": "#94FA33",
+                    "surface": "#fbf9f8",
+                    "surface-dim": "#dbdad9",
+                    "surface-tint": "#5f5e5f",
+                    "on-error": "#ffffff",
+                    "tertiary-fixed-dim": "#7bde08",
+                    "paper-surface": "#F9F9F8",
+                    "on-error-container": "#93000a",
+                    "secondary": "#5d5f5e"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "2xl": "1rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "margin-mobile": "16px",
+                    "unit": "4px",
+                    "margin-desktop": "64px",
+                    "container-max": "1440px",
+                    "margin-tablet": "32px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Inter"],
+                    "label-md": ["Geist", "sans-serif"],
+                    "display-xl": ["Geist", "sans-serif"],
+                    "body-md": ["Inter"],
+                    "headline-lg-mobile": ["Geist", "sans-serif"],
+                    "display-lg": ["Geist", "sans-serif"],
+                    "headline-lg": ["Geist", "sans-serif"],
+                    "mono-sm": ["Geist", "monospace"]
+            },
+            "fontSize": {
+                    "body-lg": ["18px", {"lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "400"}],
+                    "label-md": ["13px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                    "display-xl": ["72px", {"lineHeight": "72px", "letterSpacing": "-0.04em", "fontWeight": "700"}],
+                    "body-md": ["15px", {"lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "52px", "letterSpacing": "-0.03em", "fontWeight": "700"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                    "mono-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0em", "fontWeight": "400"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        body {
+            background-color: #F9F9F8;
+            color: #000000;
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        h1, h2, h3, h4, h5, h6, .font-geist {
+            font-family: 'Geist', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-paper-surface text-primary">
+<!-- Site Header (Shared) -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/30 transition-all duration-300">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20 max-w-container-max mx-auto">
+<a class="flex items-center gap-3 transition-transform hover:scale-105 active:scale-95 cursor-pointer" href="Index.html">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="restaurant">restaurant</span>
+<span class="font-display-lg text-headline-lg-mobile md:text-headline-lg font-bold text-primary tracking-tighter">Foodify</span>
+</a>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="text-secondary hover:text-primary transition-colors font-label-md text-label-md" href="Index.html#services">Services</a>
+<a class="text-secondary hover:text-primary transition-colors font-label-md text-label-md" href="Index.html#sectors">Sectors</a>
+<a class="text-secondary hover:text-primary transition-colors font-label-md text-label-md" href="FoodifyApp.html">Dining OS</a>
+<a class="text-secondary hover:text-primary transition-colors font-label-md text-label-md" href="About.html">About</a>
+</nav>
+<a class="bg-primary text-on-primary px-6 py-2 rounded-full font-label-md text-label-md hover:bg-forest-deep transition-colors hidden md:block" href="Contact.html">Get in Touch</a>
+<button class="md:hidden text-primary" id="menu-toggle">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+<div class="md:hidden hidden bg-surface/95 backdrop-blur-md border-t border-outline-variant/30 px-margin-mobile py-4" id="mobile-menu">
+<nav class="flex flex-col gap-2">
+<a class="px-4 py-3 rounded-xl font-label-md text-label-md text-secondary hover:bg-surface-container transition-colors" href="Index.html#services">Services</a>
+<a class="px-4 py-3 rounded-xl font-label-md text-label-md text-secondary hover:bg-surface-container transition-colors" href="Index.html#sectors">Sectors</a>
+<a class="px-4 py-3 rounded-xl font-label-md text-label-md text-secondary hover:bg-surface-container transition-colors" href="FoodifyApp.html">Dining OS</a>
+<a class="px-4 py-3 rounded-xl font-label-md text-label-md text-secondary hover:bg-surface-container transition-colors" href="About.html">About</a>
+<a class="mt-2 bg-primary text-on-primary text-center px-6 py-3 rounded-full font-label-md text-label-md" href="Contact.html">Get in Touch</a>
+</nav>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative pt-32 pb-24 md:pt-40 md:pb-32 overflow-hidden">
+<div class="absolute inset-0 z-0 bg-forest-deep">
+<div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#94FA33 1px, transparent 1px); background-size: 24px 24px;"></div>
+</div>
+<div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full text-center">
+<span class="inline-flex items-center gap-2 px-3 py-1 bg-action-lime/20 text-action-lime rounded-full mb-8 border border-action-lime/30 font-mono-sm text-mono-sm uppercase tracking-widest">Contact Us</span>
+<h1 class="font-display-xl text-display-lg md:text-display-xl text-white mb-6 tracking-tight leading-tight">Let's talk about your dining program.</h1>
+<p class="font-body-lg text-body-lg text-cream-soft/80 max-w-2xl mx-auto mb-10">Ready to elevate your workplace culinary standards? Reach out to our team for tailored solutions across corporate, education, and healthcare.</p>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-24 md:py-32 bg-paper-surface" id="contact">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+<!-- Left Column -->
+<div>
+<div class="mb-12">
+<span class="text-secondary font-label-md text-label-md uppercase tracking-widest mb-4 block">Partner with Foodify</span>
+<h2 class="font-display-lg text-headline-lg-mobile md:text-display-lg text-primary mb-6">We respond within one business day.</h2>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-12">
+<div class="bg-white p-6 rounded-2xl border border-slate-muted">
+<div class="w-10 h-10 rounded-full bg-action-lime/20 flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-action-lime" data-icon="mail">mail</span>
+</div>
+<h3 class="font-label-md text-label-md text-primary font-bold mb-1">Email Us</h3>
+<p class="font-body-md text-body-md text-secondary">hello@foodify.example</p>
+</div>
+<div class="bg-white p-6 rounded-2xl border border-slate-muted">
+<div class="w-10 h-10 rounded-full bg-action-lime/20 flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-action-lime" data-icon="call">call</span>
+</div>
+<h3 class="font-label-md text-label-md text-primary font-bold mb-1">Call Us</h3>
+<p class="font-body-md text-body-md text-secondary">+1 (800) FOODIFY</p>
+</div>
+<div class="bg-white p-6 rounded-2xl border border-slate-muted">
+<div class="w-10 h-10 rounded-full bg-action-lime/20 flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-action-lime" data-icon="schedule">schedule</span>
+</div>
+<h3 class="font-label-md text-label-md text-primary font-bold mb-1">Support</h3>
+<p class="font-body-md text-body-md text-secondary">24/7 for enterprises and app users</p>
+</div>
+<div class="bg-white p-6 rounded-2xl border border-slate-muted">
+<div class="w-10 h-10 rounded-full bg-action-lime/20 flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-action-lime" data-icon="location_on">location_on</span>
+</div>
+<h3 class="font-label-md text-label-md text-primary font-bold mb-1">Headquarters</h3>
+<p class="font-body-md text-body-md text-secondary">Foodify HQ, Bengaluru, India</p>
+</div>
+</div>
+<div class="rounded-3xl overflow-hidden shadow-lg aspect-[4/3] border-[8px] border-white/50 relative">
+<img class="w-full h-full object-cover" data-alt="Two professionals using a tablet in a modern corporate cafeteria" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiCOMXzBDkauUs6kFIid8bivLAM_6KxJt-PYRcMFLThgfyGx0PmrGpK5eolLcVq_zQoLBp0LOmioiEn5FYIs8GHFhBWpeervfhHj-oEvJydvs3Dvcu238KPwZm6dzfrXnex4MjivWJXhFWNjzCsnWXxJfQiHb-qdmXI9esIxGcWj4_JGiCqagCbqc3Df5hgDln2zAqWURMSij_NO7SmtFlm9-Co2YvTXJtskErBI5HehviUD5Q5HgY"/>
+</div>
+</div>
+<!-- Right Column (Form) -->
+<div class="bg-white rounded-[2rem] p-6 md:p-10 border border-slate-muted shadow-sm">
+<!-- Tabs -->
+<div class="flex flex-wrap gap-3 mb-10" id="form-tabs">
+<button type="button" class="form-tab px-6 py-2.5 rounded-full border border-forest-deep bg-action-lime text-forest-deep font-label-md text-[14px] font-bold shadow-sm transition-transform hover:scale-105" data-value="Enterprises">Enterprises</button>
+<button type="button" class="form-tab px-6 py-2.5 rounded-full border border-outline-variant bg-surface text-secondary font-label-md text-[14px] shadow-sm transition-transform hover:scale-105" data-value="Food Vendors">Food Vendors</button>
+<button type="button" class="form-tab px-6 py-2.5 rounded-full border border-outline-variant bg-surface text-secondary font-label-md text-[14px] shadow-sm transition-transform hover:scale-105" data-value="App Support">App Support</button>
+</div>
+<input id="form-interest" name="interest" type="hidden" value="Enterprises"/>
+<form id="contact-form" class="space-y-6" novalidate>
+<input id="form-name" name="name" class="w-full px-5 py-4 rounded-xl border border-outline-variant focus:border-action-lime focus:ring-1 focus:ring-action-lime outline-none transition-colors bg-surface-bright font-body-md text-primary" placeholder="Full Name" type="text" required/>
+<input id="form-email" name="email" class="w-full px-5 py-4 rounded-xl border border-outline-variant focus:border-action-lime focus:ring-1 focus:ring-action-lime outline-none transition-colors bg-surface-bright font-body-md text-primary" placeholder="Work Email" type="email" required/>
+<input id="form-organization" name="organization" class="w-full px-5 py-4 rounded-xl border border-outline-variant focus:border-action-lime focus:ring-1 focus:ring-action-lime outline-none transition-colors bg-surface-bright font-body-md text-primary" placeholder="Organization Name" type="text" required/>
+<div class="relative">
+<select id="form-industry" name="industry" class="w-full px-5 py-4 rounded-xl border border-outline-variant focus:border-action-lime focus:ring-1 focus:ring-action-lime outline-none transition-colors appearance-none bg-surface-bright font-body-md text-primary cursor-pointer" required>
+<option disabled="" selected="" value="">Select Your Industry</option>
+<option>Corporate</option>
+<option>Education</option>
+<option>Healthcare</option>
+<option>Other</option>
+</select>
+<div class="absolute right-4 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-surface-container flex items-center justify-center pointer-events-none">
+<span class="material-symbols-outlined text-primary text-sm font-bold" data-icon="keyboard_arrow_down">keyboard_arrow_down</span>
+</div>
+</div>
+<textarea id="form-message" name="message" class="w-full px-5 py-4 rounded-xl border border-outline-variant focus:border-action-lime focus:ring-1 focus:ring-action-lime outline-none transition-colors bg-surface-bright font-body-md text-primary resize-none h-32" placeholder="How can we help?" required></textarea>
+<input id="form-website" name="website" class="hidden" tabindex="-1" autocomplete="off" type="text"/>
+<div id="form-status" class="hidden rounded-xl px-5 py-4 font-body-md text-body-md"></div>
+<button id="form-submit" class="w-full bg-forest-deep text-action-lime px-8 py-4 rounded-xl font-label-md text-label-md font-bold hover:bg-black transition-colors flex items-center justify-center gap-2" type="submit">
+<span id="form-submit-label">Start the Conversation</span> <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- Offices Section -->
+<section class="py-24 bg-surface-container-low" id="offices">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="mb-16 text-center max-w-4xl mx-auto">
+<span class="text-secondary font-label-md text-label-md uppercase tracking-widest mb-4 block">Global Offices</span>
+<h2 class="font-display-lg text-headline-lg-mobile md:text-display-lg text-primary">Serving workplaces across the globe.</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-white p-8 rounded-2xl border border-slate-muted text-center">
+<h3 class="font-headline-lg text-[20px] font-semibold text-primary mb-2">Bengaluru</h3>
+<p class="font-body-md text-body-md text-secondary">Headquarters — India</p>
+</div>
+<div class="bg-white p-8 rounded-2xl border border-slate-muted text-center">
+<h3 class="font-headline-lg text-[20px] font-semibold text-primary mb-2">New York</h3>
+<p class="font-body-md text-body-md text-secondary">North America</p>
+</div>
+<div class="bg-white p-8 rounded-2xl border border-slate-muted text-center">
+<h3 class="font-headline-lg text-[20px] font-semibold text-primary mb-2">London</h3>
+<p class="font-body-md text-body-md text-secondary">Europe, Middle East &amp; Africa</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Site Footer (Shared) -->
+<footer class="bg-forest-deep w-full pt-16 pb-8 md:pt-24 border-t border-secondary/20">
+<div class="flex flex-col md:flex-row justify-between items-start px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto gap-12">
+<div class="md:max-w-xs">
+<a href="Index.html"><span class="font-display-lg text-headline-lg text-action-lime mb-4 block font-bold tracking-tighter">Foodify</span></a>
+<p class="font-body-md text-body-md text-cream-soft mb-8">Intelligence meets Food. Elevating the modern workplace dining experience.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full border border-secondary/40 flex items-center justify-center text-cream-soft hover:border-action-lime hover:text-action-lime transition-colors" href="Contact.html" aria-label="Contact"><span class="material-symbols-outlined" data-icon="mail">mail</span></a>
+<a class="w-10 h-10 rounded-full border border-secondary/40 flex items-center justify-center text-cream-soft hover:border-action-lime hover:text-action-lime transition-colors" href="About.html" aria-label="About"><span class="material-symbols-outlined" data-icon="info">info</span></a>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 flex-1">
+<div>
+<h4 class="font-label-md text-label-md text-white mb-6 uppercase tracking-wider">Solutions</h4>
+<ul class="space-y-4">
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-action-lime transition-colors" href="CafeteriaManaged.html">Cafeteria Managed</a></li>
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-action-lime transition-colors" href="FoodifyApp.html">Dining OS</a></li>
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-action-lime transition-colors" href="EventGiftingService.html">Events &amp; Gifting</a></li>
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-action-lime transition-colors" href="PantryService.html">Pantry Services</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-white mb-6 uppercase tracking-wider">Sectors</h4>
+<ul class="space-y-4">
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-action-lime transition-colors" href="CoporateSector.html">Corporate</a></li>
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-action-lime transition-colors" href="EducationSector.html">Education</a></li>
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-action-lime transition-colors" href="HealthcareSector.html">Healthcare</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-white mb-6 uppercase tracking-wider">Company</h4>
+<ul class="space-y-4">
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-action-lime transition-colors" href="About.html">About</a></li>
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-action-lime transition-colors" href="CaseStudies.html">Case Studies</a></li>
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-action-lime transition-colors" href="Contact.html">Contact</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-white mb-6 uppercase tracking-wider">Legal</h4>
+<ul class="space-y-4">
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-action-lime transition-colors" href="PrivacyPolicy.html">Privacy Policy</a></li>
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-action-lime transition-colors" href="TermsOfService.html">Terms of Service</a></li>
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-action-lime transition-colors" href="Sustainability.html">Sustainability</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="mt-16 md:mt-24 pt-8 border-t border-secondary/20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto text-center md:text-left">
+<p class="font-body-md text-body-md text-secondary-fixed-dim">© 2025 Foodify Culinary Solutions. Intelligence meets Food.</p>
+</div>
+</footer>
+<script>
+        (function () {
+            var FORM_ENDPOINT = 'https://script.google.com/macros/s/AKfycbzFasqGkt2NfU--WddaSj5JWesGEOWmFsugmaqlFIpZwJc4ZEHKWf_eUThp7hvwhtEN/exec';
+            var form = document.getElementById('contact-form');
+            if (!form) return;
+            var status = document.getElementById('form-status');
+            var submitBtn = document.getElementById('form-submit');
+            var label = document.getElementById('form-submit-label');
+            var originalLabel = label.textContent;
+            var requiredFields = ['form-name', 'form-email', 'form-organization', 'form-industry', 'form-message'];
+            function showStatus(msg, type) {
+                status.textContent = msg;
+                status.classList.remove('hidden', 'bg-action-lime/10', 'text-forest-deep', 'border', 'border-action-lime', 'bg-red-50', 'text-red-600', 'border-red-200');
+                if (type === 'success') {
+                    status.classList.add('bg-action-lime/10', 'text-forest-deep', 'border', 'border-action-lime');
+                } else {
+                    status.classList.add('bg-red-50', 'text-red-600', 'border', 'border-red-200');
+                }
+            }
+            var tabs = document.querySelectorAll('.form-tab');
+            var interestInput = document.getElementById('form-interest');
+            function setTab(activeBtn) {
+                tabs.forEach(function (t) {
+                    var isActive = t === activeBtn;
+                    t.className = 'form-tab px-6 py-2.5 rounded-full font-label-md text-[14px] shadow-sm transition-transform hover:scale-105' + (isActive ? ' border border-forest-deep bg-action-lime text-forest-deep font-bold' : ' border border-outline-variant bg-surface text-secondary');
+                });
+                interestInput.value = activeBtn.getAttribute('data-value');
+            }
+            tabs.forEach(function (t) {
+                t.addEventListener('click', function () { setTab(t); });
+            });
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+                for (var i = 0; i < requiredFields.length; i++) {
+                    var el = document.getElementById(requiredFields[i]);
+                    if (!el.value || (el.id === 'form-email' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(el.value))) {
+                        el.focus();
+                        showStatus('Please fill in all fields with valid details.', 'error');
+                        return;
+                    }
+                }
+                if (document.getElementById('form-website').value) return;
+                var payload = {
+                    name: document.getElementById('form-name').value,
+                    email: document.getElementById('form-email').value,
+                    organization: document.getElementById('form-organization').value,
+                    industry: document.getElementById('form-industry').value,
+                    interest: interestInput.value,
+                    message: document.getElementById('form-message').value,
+                    source: window.location.pathname
+                };
+                submitBtn.disabled = true;
+                label.textContent = 'Sending...';
+                fetch(FORM_ENDPOINT, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                })
+                .then(function () {
+                    showStatus('Thank you! Your message has been sent — we will get back to you within 24 hours.', 'success');
+                    form.reset();
+                    setTab(tabs[0]);
+                })
+                .catch(function () {
+                    showStatus('Something went wrong. Please try again or email us directly.', 'error');
+                })
+                .finally(function () {
+                    submitBtn.disabled = false;
+                    label.textContent = originalLabel;
+                });
+            });
+        })();
+    </script>
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const toggle = document.getElementById('menu-toggle');
+            const menu = document.getElementById('mobile-menu');
+            if (toggle && menu) {
+                toggle.addEventListener('click', () => menu.classList.toggle('hidden'));
+            }
+        });
+    </script>
+</body></html>

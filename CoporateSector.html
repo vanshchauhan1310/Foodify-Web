@@ -1,0 +1,606 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Corporate Dining - Foodify</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-container": "#5f6161",
+                    "on-tertiary": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "on-surface": "#1b1c1c",
+                    "on-error-container": "#93000a",
+                    "tertiary": "#000000",
+                    "primary-container": "#1c1b1c",
+                    "secondary-fixed-dim": "#c6c7c6",
+                    "slate-muted": "#E5E5E1",
+                    "on-secondary-fixed-variant": "#454747",
+                    "on-tertiary-fixed-variant": "#285000",
+                    "on-surface-variant": "#46464a",
+                    "surface-dim": "#dbdad9",
+                    "secondary": "#5d5f5e",
+                    "on-tertiary-fixed": "#0d2000",
+                    "surface-bright": "#fbf9f8",
+                    "on-primary-fixed": "#1c1b1c",
+                    "cream-soft": "#F4F4F0",
+                    "secondary-container": "#dcdddc",
+                    "action-lime": "#94FA33",
+                    "background": "#fbf9f8",
+                    "primary-fixed": "#e5e2e3",
+                    "on-primary": "#ffffff",
+                    "inverse-on-surface": "#f2f0f0",
+                    "secondary-fixed": "#e2e2e2",
+                    "outline": "#77777b",
+                    "surface": "#fbf9f8",
+                    "on-primary-container": "#858384",
+                    "surface-container-highest": "#e4e2e2",
+                    "surface-container-low": "#f5f3f3",
+                    "primary": "#000000",
+                    "error": "#ba1a1a",
+                    "on-secondary-fixed": "#1a1c1c",
+                    "on-tertiary-container": "#509400",
+                    "tertiary-fixed-dim": "#7bde08",
+                    "surface-variant": "#e4e2e2",
+                    "surface-container": "#efeded",
+                    "surface-container-high": "#e9e8e7",
+                    "forest-deep": "#0F1A0F",
+                    "surface-tint": "#5f5e5f",
+                    "inverse-surface": "#303031",
+                    "on-primary-fixed-variant": "#474647",
+                    "paper-surface": "#F9F9F8",
+                    "error-container": "#ffdad6",
+                    "primary-fixed-dim": "#c8c6c7",
+                    "inverse-primary": "#c8c6c7",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary-fixed": "#96fc35",
+                    "outline-variant": "#c7c6ca",
+                    "tertiary-container": "#0d2000",
+                    "on-background": "#1b1c1c"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-tablet": "32px",
+                    "unit": "4px",
+                    "margin-mobile": "16px",
+                    "container-max": "1440px",
+                    "margin-desktop": "64px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "mono-sm": [
+                            "Geist"
+                    ],
+                    "headline-lg": [
+                            "Geist"
+                    ],
+                    "body-md": [
+                            "Inter"
+                    ],
+                    "headline-lg-mobile": [
+                            "Geist"
+                    ],
+                    "display-xl": [
+                            "Geist"
+                    ],
+                    "label-md": [
+                            "Geist"
+                    ],
+                    "display-lg": [
+                            "Geist"
+                    ],
+                    "body-lg": [
+                            "Inter"
+                    ]
+            },
+            "fontSize": {
+                    "mono-sm": [
+                            "12px",
+                            {
+                                    "lineHeight": "16px",
+                                    "letterSpacing": "0em",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "headline-lg": [
+                            "32px",
+                            {
+                                    "lineHeight": "40px",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "body-md": [
+                            "15px",
+                            {
+                                    "lineHeight": "24px",
+                                    "letterSpacing": "0em",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "headline-lg-mobile": [
+                            "24px",
+                            {
+                                    "lineHeight": "32px",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "display-xl": [
+                            "72px",
+                            {
+                                    "lineHeight": "72px",
+                                    "letterSpacing": "-0.04em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "label-md": [
+                            "13px",
+                            {
+                                    "lineHeight": "16px",
+                                    "letterSpacing": "0.02em",
+                                    "fontWeight": "500"
+                            }
+                    ],
+                    "display-lg": [
+                            "48px",
+                            {
+                                    "lineHeight": "52px",
+                                    "letterSpacing": "-0.03em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "body-lg": [
+                            "18px",
+                            {
+                                    "lineHeight": "28px",
+                                    "letterSpacing": "-0.01em",
+                                    "fontWeight": "400"
+                            }
+                    ]
+            }
+    },
+        },
+      }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(229, 229, 225, 0.5);
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.02);
+        }
+        .text-gradient {
+            background: linear-gradient(90deg, #1b1c1c 0%, #454747 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        body {
+            background-color: #F9F9F8; /* paper-surface */
+            color: #1b1c1c; /* on-surface */
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col font-body-md">
+<!-- Site Header (Shared) -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/30 transition-all duration-300">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20 max-w-container-max mx-auto">
+<a class="flex items-center gap-3 transition-transform hover:scale-105 active:scale-95 cursor-pointer" href="Index.html">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="restaurant">restaurant</span>
+<span class="font-display-lg text-headline-lg-mobile md:text-headline-lg font-bold text-primary tracking-tighter">Foodify</span>
+</a>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="text-secondary hover:text-primary transition-colors font-label-md text-label-md" href="Index.html#services">Services</a>
+<a class="text-primary font-bold border-b-2 border-action-lime py-1 font-label-md text-label-md" href="Index.html#sectors">Sectors</a>
+<a class="text-secondary hover:text-primary transition-colors font-label-md text-label-md" href="FoodifyApp.html">Dining OS</a>
+<a class="text-secondary hover:text-primary transition-colors font-label-md text-label-md" href="About.html">About</a>
+</nav>
+<a class="bg-primary text-on-primary px-6 py-2 rounded-full font-label-md text-label-md hover:bg-forest-deep transition-colors hidden md:block" href="Contact.html">Get in Touch</a>
+<button class="md:hidden text-primary" id="menu-toggle">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+<div class="md:hidden hidden bg-surface/95 backdrop-blur-md border-t border-outline-variant/30 px-margin-mobile py-4" id="mobile-menu">
+<nav class="flex flex-col gap-2">
+<a class="px-4 py-3 rounded-xl font-label-md text-label-md text-secondary hover:bg-surface-container transition-colors" href="Index.html#services">Services</a>
+<a class="px-4 py-3 rounded-xl font-label-md text-label-md text-primary font-bold hover:bg-surface-container transition-colors" href="Index.html#sectors">Sectors</a>
+<a class="px-4 py-3 rounded-xl font-label-md text-label-md text-secondary hover:bg-surface-container transition-colors" href="FoodifyApp.html">Dining OS</a>
+<a class="px-4 py-3 rounded-xl font-label-md text-label-md text-secondary hover:bg-surface-container transition-colors" href="About.html">About</a>
+<a class="mt-2 bg-primary text-on-primary text-center px-6 py-3 rounded-full font-label-md text-label-md" href="Contact.html">Get in Touch</a>
+</nav>
+</div>
+</header>
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="relative pt-24 pb-32 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto overflow-hidden">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div class="z-10 relative">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cream-soft border border-slate-muted mb-6">
+<span class="w-2 h-2 rounded-full bg-action-lime"></span>
+<span class="font-mono-sm text-mono-sm text-on-surface-variant">Corporate Dining Solutions</span>
+</div>
+<h1 class="font-display-xl text-display-xl text-primary tracking-tight leading-tight mb-6 text-gradient">
+                        Better Food.<br>Better Workdays.
+                    </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-xl">
+                        Transform your corporate cafeteria from a cost center into a strategic asset. We design, build, and operate data-driven dining experiences that fuel high-performance teams.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="bg-primary hover:bg-surface-tint text-on-primary px-8 py-4 rounded-xl font-label-md text-label-md transition-all shadow-sm flex items-center justify-center gap-2">
+                            Build Your Program
+                        </button>
+<button class="bg-white hover:bg-surface-container text-primary border border-slate-muted px-8 py-4 rounded-xl font-label-md text-label-md transition-all flex items-center justify-center gap-2">
+                            View Case Studies
+                        </button>
+</div>
+</div>
+<div class="relative h-[600px] w-full z-0">
+<div class="absolute inset-0 rounded-2xl overflow-hidden shadow-lg border border-slate-muted">
+<img class="w-full h-full object-cover" data-alt="A brightly lit, modern corporate cafeteria with high ceilings, warm wood accents, and large windows. Employees in smart casual attire are enjoying meals at long communal tables. The atmosphere is vibrant, professional, and collaborative, with a focus on fresh, healthy food options visible at the serving stations. The lighting is natural and inviting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUI_ScbVnqc9CU8_S2mIrzZ9xlCJJvF7Xm42o5XzxClvm_kgg4xBagYuA_QI1ATJQpMEMhyDDQPtPxzFyLkOTOW4D0tYBqMPtRobySYaCw3XYvLpLYlaIoIeV7xtZa41NTedaBpnMijV3qQYCLb8L23lzMaB9c4CHJ687f-1SIvBBf4cilhmnul4wL-LxXzLeIr9VhI0a4gyGqyoQaH2bPio63pLZak4QZphvTyrjdud3rqeAEPxh9">
+</div>
+<!-- Floating UI Metric 1 -->
+<div class="absolute top-12 -left-8 glass-panel p-4 rounded-xl flex items-center gap-4 animate-[bounce_4s_infinite_alternate]">
+<div class="w-12 h-12 rounded-full bg-forest-deep flex items-center justify-center text-action-lime">
+<span class="material-symbols-outlined">restaurant_menu</span>
+</div>
+<div>
+<p class="font-mono-sm text-mono-sm text-secondary">Meals Served Today</p>
+<p class="font-headline-lg-mobile text-headline-lg-mobile font-bold text-primary">2,840</p>
+</div>
+</div>
+<!-- Floating UI Metric 2 -->
+<div class="absolute bottom-16 -right-6 glass-panel p-4 rounded-xl flex items-center gap-4 animate-[bounce_5s_infinite_alternate_reverse]">
+<div class="w-12 h-12 rounded-full bg-cream-soft flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</div>
+<div>
+<p class="font-mono-sm text-mono-sm text-secondary">Employee Satisfaction</p>
+<div class="flex items-end gap-1">
+<p class="font-headline-lg-mobile text-headline-lg-mobile font-bold text-primary">92%</p>
+<span class="material-symbols-outlined text-action-lime text-[16px] mb-1">trending_up</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Challenge Section -->
+<section class="py-24 bg-white border-y border-slate-muted px-margin-mobile md:px-margin-desktop">
+<div class="max-w-container-max mx-auto">
+<div class="mb-16 md:w-2/3">
+<h2 class="font-display-lg text-display-lg text-primary mb-4">The Friction in Foodservice</h2>
+<p class="font-body-lg text-body-lg text-secondary">Traditional cafeteria management is broken. We eliminate the operational headaches so you can focus on your core business.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Card 1 -->
+<div class="p-6 rounded-2xl bg-paper-surface border border-slate-muted hover:shadow-md transition-shadow group">
+<div class="w-10 h-10 rounded-full bg-error-container text-error flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">timer_off</span>
+</div>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary mb-2">Long Queues</h3>
+<p class="font-body-md text-body-md text-secondary">Peak hour congestion wastes valuable employee time and decreases satisfaction scores.</p>
+</div>
+<!-- Card 2 -->
+<div class="p-6 rounded-2xl bg-paper-surface border border-slate-muted hover:shadow-md transition-shadow group">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest text-on-surface-variant flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">hub</span>
+</div>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary mb-2">Vendor Complexity</h3>
+<p class="font-body-md text-body-md text-secondary">Managing multiple caterers, contracts, and compliance standards is an administrative nightmare.</p>
+</div>
+<!-- Card 3 -->
+<div class="p-6 rounded-2xl bg-paper-surface border border-slate-muted hover:shadow-md transition-shadow group">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest text-on-surface-variant flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">visibility_off</span>
+</div>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary mb-2">Lack of Visibility</h3>
+<p class="font-body-md text-body-md text-secondary">Zero real-time data on consumption patterns, making cost control nearly impossible.</p>
+</div>
+<!-- Card 4 -->
+<div class="p-6 rounded-2xl bg-paper-surface border border-slate-muted hover:shadow-md transition-shadow group">
+<div class="w-10 h-10 rounded-full bg-error-container text-error flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">delete_sweep</span>
+</div>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary mb-2">Food Waste</h3>
+<p class="font-body-md text-body-md text-secondary">Inaccurate demand forecasting leads to massive food waste and financial loss daily.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Operational Workflow -->
+<section class="py-32 px-margin-mobile md:px-margin-desktop bg-forest-deep text-white relative overflow-hidden">
+<!-- Background Texture -->
+<div class="absolute inset-0 opacity-5" style="background-image: radial-gradient(#ffffff 1px, transparent 1px); background-size: 24px 24px;"></div>
+<div class="max-w-container-max mx-auto relative z-10">
+<div class="text-center mb-20">
+<h2 class="font-display-lg text-display-lg text-on-tertiary mb-4">The Foodify Framework</h2>
+<p class="font-body-lg text-body-lg text-surface-dim max-w-2xl mx-auto">An end-to-end operational model designed for scale and precision.</p>
+</div>
+<div class="flex flex-col md:flex-row justify-between items-start relative">
+<!-- Connecting Line -->
+<div class="hidden md:block absolute top-8 left-10 right-10 h-0.5 bg-surface-tint z-0"></div>
+<!-- Step 1 -->
+<div class="flex flex-col items-center text-center relative z-10 flex-1 px-4 mb-8 md:mb-0">
+<div class="w-16 h-16 rounded-full bg-black border-2 border-action-lime flex items-center justify-center mb-6 shadow-[0_0_15px_rgba(148,250,51,0.3)]">
+<span class="font-mono-sm text-mono-sm text-action-lime">01</span>
+</div>
+<h4 class="font-headline-lg-mobile text-headline-lg-mobile mb-2">Understand</h4>
+<p class="font-body-md text-body-md text-secondary-fixed-dim text-sm">Site audit &amp; demographic analysis</p>
+</div>
+<!-- Step 2 -->
+<div class="flex flex-col items-center text-center relative z-10 flex-1 px-4 mb-8 md:mb-0">
+<div class="w-16 h-16 rounded-full bg-black border border-surface-tint flex items-center justify-center mb-6">
+<span class="font-mono-sm text-mono-sm text-surface-dim">02</span>
+</div>
+<h4 class="font-headline-lg-mobile text-headline-lg-mobile mb-2">Build</h4>
+<p class="font-body-md text-body-md text-secondary-fixed-dim text-sm">Menu engineering &amp; kitchen design</p>
+</div>
+<!-- Step 3 -->
+<div class="flex flex-col items-center text-center relative z-10 flex-1 px-4 mb-8 md:mb-0">
+<div class="w-16 h-16 rounded-full bg-black border border-surface-tint flex items-center justify-center mb-6">
+<span class="font-mono-sm text-mono-sm text-surface-dim">03</span>
+</div>
+<h4 class="font-headline-lg-mobile text-headline-lg-mobile mb-2">Run</h4>
+<p class="font-body-md text-body-md text-secondary-fixed-dim text-sm">Vendor onboarding &amp; daily ops</p>
+</div>
+<!-- Step 4 -->
+<div class="flex flex-col items-center text-center relative z-10 flex-1 px-4 mb-8 md:mb-0">
+<div class="w-16 h-16 rounded-full bg-black border border-surface-tint flex items-center justify-center mb-6">
+<span class="font-mono-sm text-mono-sm text-surface-dim">04</span>
+</div>
+<h4 class="font-headline-lg-mobile text-headline-lg-mobile mb-2">Digitize</h4>
+<p class="font-body-md text-body-md text-secondary-fixed-dim text-sm">POS, App deployment &amp; IoT integration</p>
+</div>
+<!-- Step 5 -->
+<div class="flex flex-col items-center text-center relative z-10 flex-1 px-4">
+<div class="w-16 h-16 rounded-full bg-black border border-surface-tint flex items-center justify-center mb-6">
+<span class="font-mono-sm text-mono-sm text-surface-dim">05</span>
+</div>
+<h4 class="font-headline-lg-mobile text-headline-lg-mobile mb-2">Optimize</h4>
+<p class="font-body-md text-body-md text-secondary-fixed-dim text-sm">AI-driven insights &amp; continuous improvement</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Solutions Grid (Bento) -->
+<section class="py-32 px-margin-mobile md:px-margin-desktop bg-paper-surface">
+<div class="max-w-container-max mx-auto">
+<h2 class="font-display-lg text-display-lg text-primary mb-12">Comprehensive Solutions</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[250px]">
+<!-- Employee Cafeteria -->
+<div class="md:col-span-2 md:row-span-2 rounded-2xl bg-white border border-slate-muted p-8 flex flex-col justify-between relative overflow-hidden group">
+<div class="absolute inset-0 opacity-20 group-hover:opacity-30 transition-opacity duration-500">
+<img class="w-full h-full object-cover" data-alt="Overhead view of a bustling, modern corporate cafeteria food station. Fresh, colorful salads, artisanal sandwiches, and hot meal options are elegantly displayed under warm lighting. The aesthetic is clean, premium, and appetizing." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8pFSfCLmbndC1XEYTpofrYaULcvyNn_rERoSt6ZHqDGdxkqiJLWUYiqMRuMulcY0Gl7CcTnpbgwk9bzZJWJEjLQfMbUwfNVdkYuUpFKgIpaPiZfJZrA4TN75MA4chC9fzvKHQG6hXlDekL_tCSgJMGRUypYxl2dn3fTjUMZvs_WkDEAXz7fF3mkb_DWdEO9ZAAapFDffnbMRaWY0P6BVyfYxkRrnfGZmI0P8QGrqfUap83GzeCHYJ">
+</div>
+<div class="relative z-10">
+<div class="w-12 h-12 rounded-full bg-cream-soft flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-primary">restaurant</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-primary mb-2">Employee Cafeteria</h3>
+<p class="font-body-md text-body-md text-secondary max-w-md">Full-service management of on-site dining facilities, focusing on diverse cuisines, nutritional transparency, and speed of service.</p>
+</div>
+<div class="relative z-10 mt-auto">
+<button class="flex items-center gap-2 text-primary font-label-md hover:text-action-lime transition-colors">
+                                Explore Cafeteria Ops <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Vendor Management -->
+<div class="rounded-2xl bg-white border border-slate-muted p-8 flex flex-col">
+<div class="w-10 h-10 rounded-full bg-cream-soft flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-primary">storefront</span>
+</div>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary mb-2">Vendor Aggregation</h3>
+<p class="font-body-md text-body-md text-secondary mb-4 flex-grow">Curated rotation of local restaurants and caterers to prevent menu fatigue.</p>
+</div>
+<!-- Digital Food Court -->
+<div class="rounded-2xl bg-forest-deep text-white p-8 flex flex-col justify-between relative overflow-hidden">
+<div class="relative z-10">
+<div class="w-10 h-10 rounded-full bg-surface-tint flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-action-lime">smartphone</span>
+</div>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile mb-2">Digital Food Court</h3>
+<p class="font-body-md text-body-md text-surface-dim">Order ahead, skip the line. Unified app experience for all campus food outlets.</p>
+</div>
+</div>
+<!-- Pantry -->
+<div class="rounded-2xl bg-white border border-slate-muted p-8 flex flex-col">
+<div class="w-10 h-10 rounded-full bg-cream-soft flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-primary">local_cafe</span>
+</div>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary mb-2">Micro-Kitchens &amp; Pantry</h3>
+<p class="font-body-md text-body-md text-secondary">Premium snacks, artisanal coffee programs, and automated inventory management.</p>
+</div>
+<!-- Subsidies -->
+<div class="rounded-2xl bg-white border border-slate-muted p-8 flex flex-col">
+<div class="w-10 h-10 rounded-full bg-cream-soft flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-primary">account_balance_wallet</span>
+</div>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary mb-2">Digital Subsidies</h3>
+<p class="font-body-md text-body-md text-secondary">Flexible wallet systems to manage employee meal allowances seamlessly.</p>
+</div>
+<!-- Events -->
+<div class="rounded-2xl bg-action-lime p-8 flex flex-col justify-center items-center text-center group cursor-pointer hover:bg-[#85e02e] transition-colors">
+<span class="material-symbols-outlined text-forest-deep text-[40px] mb-2 group-hover:scale-110 transition-transform">celebration</span>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-forest-deep">Corporate Events &amp; Catering</h3>
+</div>
+</div>
+</div>
+</section>
+<!-- SaaS Dashboard Section -->
+<section class="py-32 px-margin-mobile md:px-margin-desktop bg-white border-t border-slate-muted overflow-hidden">
+<div class="max-w-container-max mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<!-- Dashboard Mockup -->
+<div class="relative w-full aspect-[4/3] bg-surface border border-slate-muted rounded-2xl shadow-xl overflow-hidden p-6 flex flex-col">
+<!-- Top Bar -->
+<div class="flex justify-between items-center mb-8 border-b border-slate-muted pb-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">bar_chart</span>
+<span class="font-label-md text-label-md text-primary font-bold">Foodify Admin</span>
+</div>
+<div class="flex gap-4">
+<div class="w-8 h-8 rounded-full bg-cream-soft"></div>
+</div>
+</div>
+<!-- Main Content -->
+<div class="flex-grow flex flex-col gap-6">
+<div class="grid grid-cols-3 gap-4">
+<div class="bg-white p-4 border border-slate-muted rounded-lg">
+<p class="font-mono-sm text-mono-sm text-secondary mb-1">Today's Revenue</p>
+<p class="font-headline-lg-mobile text-headline-lg-mobile font-bold">$12,450</p>
+</div>
+<div class="bg-white p-4 border border-slate-muted rounded-lg">
+<p class="font-mono-sm text-mono-sm text-secondary mb-1">Active Orders</p>
+<p class="font-headline-lg-mobile text-headline-lg-mobile font-bold">342</p>
+</div>
+<div class="bg-white p-4 border border-slate-muted rounded-lg">
+<p class="font-mono-sm text-mono-sm text-secondary mb-1">Avg Prep Time</p>
+<p class="font-headline-lg-mobile text-headline-lg-mobile font-bold">4.2m</p>
+</div>
+</div>
+<!-- Chart Placeholder -->
+<div class="flex-grow bg-white border border-slate-muted rounded-lg p-4 relative">
+<p class="font-label-md text-label-md mb-4 text-primary">Peak Hour Volume</p>
+<div class="absolute bottom-4 left-4 right-4 h-32 flex items-end gap-2">
+<!-- Bars -->
+<div class="flex-1 bg-surface-container rounded-t-sm h-[20%] hover:bg-primary transition-colors"></div>
+<div class="flex-1 bg-surface-container rounded-t-sm h-[40%] hover:bg-primary transition-colors"></div>
+<div class="flex-1 bg-action-lime rounded-t-sm h-[90%] relative">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-forest-deep text-white text-[10px] py-1 px-2 rounded">1:00 PM</div>
+</div>
+<div class="flex-1 bg-surface-container rounded-t-sm h-[60%] hover:bg-primary transition-colors"></div>
+<div class="flex-1 bg-surface-container rounded-t-sm h-[30%] hover:bg-primary transition-colors"></div>
+</div>
+</div>
+</div>
+<!-- AI Insight Overlay -->
+<div class="absolute bottom-6 right-6 left-12 glass-panel rounded-xl p-4 flex gap-4 items-start border-l-4 border-l-action-lime">
+<span class="material-symbols-outlined text-action-lime">auto_awesome</span>
+<div>
+<p class="font-label-md text-label-md text-primary font-bold mb-1">Foodify Intelligence</p>
+<p class="font-mono-sm text-mono-sm text-secondary">Demand for South Indian meals expected to increase by 16% tomorrow based on weather patterns and historical Tuesday data. Consider reallocating prep station resources.</p>
+</div>
+</div>
+</div>
+<!-- Text Content -->
+<div>
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cream-soft border border-slate-muted mb-6">
+<span class="material-symbols-outlined text-[16px] text-action-lime">analytics</span>
+<span class="font-mono-sm text-mono-sm text-on-surface-variant">Data-Driven Ops</span>
+</div>
+<h2 class="font-display-lg text-display-lg text-primary mb-6">Operate with Surgical Precision.</h2>
+<p class="font-body-lg text-body-lg text-secondary mb-8">
+                            Stop guessing what your employees want. The Foodify Enterprise OS provides real-time visibility into consumption metrics, vendor performance, and predictive demand. 
+                        </p>
+<ul class="space-y-4 mb-10">
+<li class="flex items-center gap-3">
+<div class="w-6 h-6 rounded-full bg-surface-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[14px] text-primary">check</span>
+</div>
+<span class="font-body-md text-body-md text-primary">Live POS &amp; inventory sync</span>
+</li>
+<li class="flex items-center gap-3">
+<div class="w-6 h-6 rounded-full bg-surface-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[14px] text-primary">check</span>
+</div>
+<span class="font-body-md text-body-md text-primary">Automated vendor settlements</span>
+</li>
+<li class="flex items-center gap-3">
+<div class="w-6 h-6 rounded-full bg-surface-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[14px] text-primary">check</span>
+</div>
+<span class="font-body-md text-body-md text-primary">Predictive waste reduction modeling</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-24 bg-cream-soft px-margin-mobile md:px-margin-desktop text-center">
+<div class="max-w-3xl mx-auto">
+<h2 class="font-display-lg text-display-lg text-primary mb-6">Ready to upgrade your campus?</h2>
+<p class="font-body-lg text-body-lg text-secondary mb-10">Join leading tech parks and corporate campuses who trust Foodify to power their daily dining operations.</p>
+<button class="bg-action-lime hover:bg-[#85e02e] text-forest-deep px-10 py-5 rounded-xl font-label-md text-label-md transition-all shadow-sm font-bold text-lg inline-flex items-center gap-2">
+                    Build Your Corporate Food Program
+                    <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</section>
+</main>
+<!-- Site Footer (Shared) -->
+<footer class="bg-forest-deep w-full pt-16 pb-8 md:pt-24 border-t border-secondary/20">
+<div class="flex flex-col md:flex-row justify-between items-start px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto gap-12">
+<div class="md:max-w-xs">
+<a href="Index.html"><span class="font-display-lg text-headline-lg text-action-lime mb-4 block font-bold tracking-tighter">Foodify</span></a>
+<p class="font-body-md text-body-md text-cream-soft mb-8">Intelligence meets Food. Elevating the modern workplace dining experience.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full border border-secondary/40 flex items-center justify-center text-cream-soft hover:border-action-lime hover:text-action-lime transition-colors" href="Contact.html" aria-label="Contact"><span class="material-symbols-outlined" data-icon="mail">mail</span></a>
+<a class="w-10 h-10 rounded-full border border-secondary/40 flex items-center justify-center text-cream-soft hover:border-action-lime hover:text-action-lime transition-colors" href="About.html" aria-label="About"><span class="material-symbols-outlined" data-icon="info">info</span></a>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 flex-1">
+<div>
+<h4 class="font-label-md text-label-md text-white mb-6 uppercase tracking-wider">Solutions</h4>
+<ul class="space-y-4">
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-action-lime transition-colors" href="CafeteriaManaged.html">Cafeteria Managed</a></li>
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-action-lime transition-colors" href="FoodifyApp.html">Dining OS</a></li>
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-action-lime transition-colors" href="EventGiftingService.html">Events &amp; Gifting</a></li>
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-action-lime transition-colors" href="PantryService.html">Pantry Services</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-white mb-6 uppercase tracking-wider">Sectors</h4>
+<ul class="space-y-4">
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-action-lime transition-colors" href="CoporateSector.html">Corporate</a></li>
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-action-lime transition-colors" href="EducationSector.html">Education</a></li>
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-action-lime transition-colors" href="HealthcareSector.html">Healthcare</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-white mb-6 uppercase tracking-wider">Company</h4>
+<ul class="space-y-4">
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-action-lime transition-colors" href="About.html">About</a></li>
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-action-lime transition-colors" href="CaseStudies.html">Case Studies</a></li>
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-action-lime transition-colors" href="Contact.html">Contact</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-white mb-6 uppercase tracking-wider">Legal</h4>
+<ul class="space-y-4">
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-action-lime transition-colors" href="PrivacyPolicy.html">Privacy Policy</a></li>
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-action-lime transition-colors" href="TermsOfService.html">Terms of Service</a></li>
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-action-lime transition-colors" href="Sustainability.html">Sustainability</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="mt-16 md:mt-24 pt-8 border-t border-secondary/20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto text-center md:text-left">
+<p class="font-body-md text-body-md text-secondary-fixed-dim">© 2025 Foodify Culinary Solutions. Intelligence meets Food.</p>
+</div>
+</footer>
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const toggle = document.getElementById('menu-toggle');
+            const menu = document.getElementById('mobile-menu');
+            if (toggle && menu) {
+                toggle.addEventListener('click', () => menu.classList.toggle('hidden'));
+            }
+        });
+    </script>
+
+</body></html>

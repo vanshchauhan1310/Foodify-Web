@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Dining OS | Foodify</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-container-low": "#f5f3f3",
+                      "surface-variant": "#e4e2e2",
+                      "on-secondary-fixed": "#1a1c1c",
+                      "primary-fixed": "#e5e2e3",
+                      "surface": "#fbf9f8",
+                      "primary": "#000000",
+                      "slate-muted": "#E5E5E1",
+                      "on-secondary-fixed-variant": "#454747",
+                      "surface-bright": "#fbf9f8",
+                      "surface-tint": "#5f5e5f",
+                      "surface-container": "#efeded",
+                      "on-primary-fixed": "#1c1b1c",
+                      "tertiary-container": "#0d2000",
+                      "on-tertiary-container": "#509400",
+                      "secondary": "#5d5f5e",
+                      "primary-fixed-dim": "#c8c6c7",
+                      "action-lime": "#94FA33",
+                      "surface-container-high": "#e9e8e7",
+                      "on-primary": "#ffffff",
+                      "cream-soft": "#F4F4F0",
+                      "secondary-fixed": "#e2e2e2",
+                      "outline-variant": "#c7c6ca",
+                      "secondary-fixed-dim": "#c6c7c6",
+                      "paper-surface": "#F9F9F8",
+                      "on-primary-container": "#858384",
+                      "error-container": "#ffdad6",
+                      "on-secondary": "#ffffff",
+                      "on-surface": "#1b1c1c",
+                      "on-secondary-container": "#5f6161",
+                      "on-surface-variant": "#46464a",
+                      "error": "#ba1a1a",
+                      "on-primary-fixed-variant": "#474647",
+                      "secondary-container": "#dcdddc",
+                      "on-error-container": "#93000a",
+                      "on-background": "#1b1c1c",
+                      "on-tertiary-fixed-variant": "#285000",
+                      "surface-dim": "#dbdad9",
+                      "surface-container-highest": "#e4e2e2",
+                      "surface-container-lowest": "#ffffff",
+                      "on-tertiary-fixed": "#0d2000",
+                      "tertiary-fixed": "#96fc35",
+                      "on-error": "#ffffff",
+                      "inverse-on-surface": "#f2f0f0",
+                      "on-tertiary": "#ffffff",
+                      "inverse-primary": "#c8c6c7",
+                      "inverse-surface": "#303031",
+                      "background": "#fbf9f8",
+                      "primary-container": "#1c1b1c",
+                      "outline": "#77777b",
+                      "forest-deep": "#0F1A0F",
+                      "tertiary": "#000000",
+                      "tertiary-fixed-dim": "#7bde08"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-mobile": "16px",
+                      "unit": "4px",
+                      "gutter": "24px",
+                      "margin-desktop": "64px",
+                      "margin-tablet": "32px",
+                      "container-max": "1440px"
+              },
+              "fontFamily": {
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "headline-lg": [
+                              "Geist"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "mono-sm": [
+                              "Geist"
+                      ],
+                      "display-xl": [
+                              "Geist"
+                      ],
+                      "label-md": [
+                              "Geist"
+                      ],
+                      "display-lg": [
+                              "Geist"
+                      ],
+                      "headline-lg-mobile": [
+                              "Geist"
+                      ]
+              },
+              "fontSize": {
+                      "body-md": [
+                              "15px",
+                              {
+                                      "lineHeight": "24px",
+                                      "letterSpacing": "0em",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "mono-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0em",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-xl": [
+                              "72px",
+                              {
+                                      "lineHeight": "72px",
+                                      "letterSpacing": "-0.04em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "label-md": [
+                              "13px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.02em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "display-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "52px",
+                                      "letterSpacing": "-0.03em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "600"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .fill-icon {
+            font-variation-settings: 'FILL' 1;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(229, 229, 225, 0.5);
+        }
+    </style>
+</head>
+<body class="bg-paper-surface text-on-surface font-body-md antialiased overflow-x-hidden">
+<!-- Site Header (Shared) -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/30 transition-all duration-300">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20 max-w-container-max mx-auto">
+<a class="flex items-center gap-3 transition-transform hover:scale-105 active:scale-95 cursor-pointer" href="Index.html">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="restaurant">restaurant</span>
+<span class="font-display-lg text-headline-lg-mobile md:text-headline-lg font-bold text-primary tracking-tighter">Foodify</span>
+</a>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="text-secondary hover:text-primary transition-colors font-label-md text-label-md" href="Index.html#services">Services</a>
+<a class="text-secondary hover:text-primary transition-colors font-label-md text-label-md" href="Index.html#sectors">Sectors</a>
+<a class="text-primary font-bold border-b-2 border-action-lime py-1 font-label-md text-label-md" href="FoodifyApp.html">Dining OS</a>
+<a class="text-secondary hover:text-primary transition-colors font-label-md text-label-md" href="About.html">About</a>
+</nav>
+<a class="bg-primary text-on-primary px-6 py-2 rounded-full font-label-md text-label-md hover:bg-forest-deep transition-colors hidden md:block" href="Contact.html">Get in Touch</a>
+<button class="md:hidden text-primary" id="menu-toggle">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+<div class="md:hidden hidden bg-surface/95 backdrop-blur-md border-t border-outline-variant/30 px-margin-mobile py-4" id="mobile-menu">
+<nav class="flex flex-col gap-2">
+<a class="px-4 py-3 rounded-xl font-label-md text-label-md text-secondary hover:bg-surface-container transition-colors" href="Index.html#services">Services</a>
+<a class="px-4 py-3 rounded-xl font-label-md text-label-md text-secondary hover:bg-surface-container transition-colors" href="Index.html#sectors">Sectors</a>
+<a class="px-4 py-3 rounded-xl font-label-md text-label-md text-primary font-bold hover:bg-surface-container transition-colors" href="FoodifyApp.html">Dining OS</a>
+<a class="px-4 py-3 rounded-xl font-label-md text-label-md text-secondary hover:bg-surface-container transition-colors" href="About.html">About</a>
+<a class="mt-2 bg-primary text-on-primary text-center px-6 py-3 rounded-full font-label-md text-label-md" href="Contact.html">Get in Touch</a>
+</nav>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative pt-32 pb-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto flex flex-col items-center text-center">
+<div class="inline-flex items-center gap-2 bg-cream-soft px-3 py-1 rounded-full border border-slate-muted mb-8">
+<div class="w-2 h-2 rounded-full bg-action-lime"></div>
+<span class="font-mono-sm text-mono-sm text-secondary">Enterprise Edition 2.0</span>
+</div>
+<h1 class="font-display-xl text-headline-lg-mobile md:text-display-xl font-bold tracking-tight text-primary max-w-4xl mb-6 leading-tight">
+                The Intelligent <br/><span class="text-secondary">Dining OS</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-secondary-container max-w-2xl mb-12">
+                Complete digital transformation for your corporate cafeteria. Unite employees, vendors, and operations in one seamless platform.
+            </p>
+<div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+<button class="bg-primary text-on-primary font-label-md text-label-md px-8 py-4 rounded-full hover:bg-surface-tint transition-colors active:scale-95 duration-200 flex items-center justify-center gap-2">
+                    Book a Demo
+                    <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+<button class="bg-surface-container-lowest text-primary border border-slate-muted font-label-md text-label-md px-8 py-4 rounded-full hover:bg-surface-container-low transition-colors active:scale-95 duration-200">
+                    Explore Architecture
+                </button>
+</div>
+</section>
+<!-- Dashboard Showcase -->
+<section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto pb-32">
+<div class="relative w-full rounded-2xl border border-slate-muted bg-surface-container-lowest p-2 shadow-sm overflow-hidden group">
+<div class="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-action-lime to-transparent opacity-50"></div>
+<img alt="A premium, high-fidelity enterprise SaaS dashboard interface for 'Foodify Dining OS'." class="w-full h-auto rounded-xl object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_HtWLlt8fabeW4-ykrWPeUE9TFvN0tY84X7_uG_RADBj3QrI8c1U2rtDVrPcSfHUoxbYHT-NGIZzoGXMV9zOCmiwlYkpnmx6LPSC7WKM5ZdP_sJqZiwIf1lJ9QxRMNrwkFL1RAXcelDtiepGKcASBWyx27f6HbX2KCKoBl8npR-6H1-LcGd4EUdPk6MaJ_sBQr4DunDWa9hIIbHRF6-bEO2ZKI3Aez_KWVd0qB1GTRqr41Tuwk8TS"/>
+<!-- Callouts Overlay (simulated for desktop) -->
+<div class="hidden lg:block absolute inset-0 pointer-events-none">
+<!-- Callout 1 -->
+<div class="absolute top-1/4 left-1/4 transform -translate-x-1/2 -translate-y-1/2 glass-panel p-4 rounded-xl shadow-lg w-48 pointer-events-auto animate-bounce-slow">
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-action-lime fill-icon text-sm">monitoring</span>
+<span class="font-mono-sm text-mono-sm font-semibold">Real-time</span>
+</div>
+<p class="font-label-md text-label-md text-primary">Live order tracking and fulfillment metrics.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Deep Dive Sections (Bento Grid) -->
+<section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto pb-32">
+<div class="mb-16">
+<h2 class="font-display-lg text-headline-lg-mobile md:text-display-lg font-bold text-primary tracking-tight mb-4">Precision at every level.</h2>
+<p class="font-body-lg text-body-lg text-secondary max-w-2xl">Architected to eliminate friction across the entire dining ecosystem.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Card 1 -->
+<div class="col-span-1 md:col-span-2 bg-surface-container-lowest rounded-2xl border border-slate-muted p-8 hover:-translate-y-1 transition-transform duration-300 flex flex-col justify-between group">
+<div>
+<div class="w-12 h-12 bg-cream-soft rounded-full flex items-center justify-center mb-6 group-hover:bg-action-lime transition-colors">
+<span class="material-symbols-outlined text-primary">smartphone</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg font-semibold text-primary mb-3">Employee-First Ordering</h3>
+<p class="font-body-md text-body-md text-on-secondary-container mb-6 max-w-md">
+                            A consumer-grade mobile experience featuring cashless payments, nutritional transparency, and predictive menu recommendations.
+                        </p>
+</div>
+<div class="h-48 w-full bg-cream-soft rounded-xl border border-slate-muted overflow-hidden relative" data-alt="A close-up view of a sleek smartphone displaying a minimalist food ordering interface. The screen shows high-quality food photography, modern typography, and a cashless payment confirmation screen. The phone is held by a hand in a professional, bright office environment. The overall aesthetic is clean, high-contrast, and corporate-friendly, emphasizing user experience." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC4fBrHLV7vy0KvOQcXUtDtX1L1whYyGC1g4-VYb4nJX1C-ZjBdXlTeCrN6eEIV4KLU3XpdY1tH3owYGgn0Ja-fId4V9WL5nmiwTesV9hrUhvRmNatRvzzn93C83HLk2NvjiH3iYa6iiY5TIdZCemmkbLML9EnFN_p2V3WnRhM16bKno7HPfv7jwT5x_ZXoU_SHUcPSLcFm5ClH5Q33VCfWlXDUvGgIrzIJTmStdjIK5dsZ5fazRD9a')">
+<!-- Simulated UI elements -->
+<div class="absolute bottom-4 left-4 right-4 h-12 bg-surface-container-lowest rounded-lg border border-slate-muted flex items-center px-4 justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 bg-surface-container rounded-full"></div>
+<div class="h-2 w-16 bg-surface-variant rounded-full"></div>
+</div>
+<div class="h-6 w-16 bg-action-lime rounded-full"></div>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="col-span-1 bg-surface-container-lowest rounded-2xl border border-slate-muted p-8 hover:-translate-y-1 transition-transform duration-300 flex flex-col justify-between group">
+<div>
+<div class="w-12 h-12 bg-cream-soft rounded-full flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
+<span class="material-symbols-outlined text-primary group-hover:text-on-primary">settings_suggest</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg font-semibold text-primary mb-3">Operational Excellence</h3>
+<p class="font-body-md text-body-md text-on-secondary-container mb-6">
+                            Automated vendor settlements, dynamic menu engineering, and real-time inventory synchronization.
+                        </p>
+</div>
+<ul class="space-y-4 font-mono-sm text-mono-sm text-secondary">
+<li class="flex items-center justify-between border-b border-slate-muted pb-2">
+<span>Settlements</span>
+<span class="text-primary font-medium">T+1 Auto</span>
+</li>
+<li class="flex items-center justify-between border-b border-slate-muted pb-2">
+<span>Inventory Ping</span>
+<span class="text-primary font-medium">500ms</span>
+</li>
+<li class="flex items-center justify-between border-b border-slate-muted pb-2">
+<span>Menu Updates</span>
+<span class="text-primary font-medium">Global Sync</span>
+</li>
+</ul>
+</div>
+<!-- Card 3 -->
+<div class="col-span-1 md:col-span-3 bg-surface-container-lowest rounded-2xl border border-slate-muted p-8 hover:-translate-y-1 transition-transform duration-300 flex flex-col md:flex-row items-center gap-8 group">
+<div class="flex-1">
+<div class="inline-flex items-center gap-2 bg-cream-soft px-3 py-1 rounded-full border border-slate-muted mb-6">
+<span class="material-symbols-outlined text-sm">insights</span>
+<span class="font-mono-sm text-mono-sm text-secondary">For HR &amp; Admins</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg font-semibold text-primary mb-3">Enterprise Analytics</h3>
+<p class="font-body-md text-body-md text-on-secondary-container mb-6 max-w-lg">
+                            Transform consumption data into actionable insights. Track dietary preferences, peak traffic hours, and satisfaction scores to optimize your subsidy spend.
+                        </p>
+<button class="font-label-md text-label-md text-primary font-medium border-b border-primary pb-1 hover:text-action-lime hover:border-action-lime transition-colors">
+                            View Sample Report
+                        </button>
+</div>
+<div class="flex-1 w-full h-64 bg-cream-soft rounded-xl border border-slate-muted relative overflow-hidden" data-alt="A minimalist, high-fidelity data visualization graphic showing a complex line chart and bar graphs. The chart uses deep charcoal and lime green lines against a soft off-white background. The data points represent 'Consumption Trends' and 'Peak Hours'. The design is extremely clean, resembling a premium fintech dashboard or developer tool interface, with precise typography and subtle grid lines." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAk-sd9WLbicMF21pnOwEf60GSiHAaEwxst3uNAhaxPv7wn1xy-tKehMVvty7LwYm3UTo-grmOF1pJQa2PPDMV1-GMwQ7UBvtJ5rPN-g6GNKB0fG14Uq8S6j13Bh3MpPqN_6XP_b1t7y5KGCYAva6BladLauSKUwgRf77MCnMfAbyItWcJagmcWguQbxhPmNmTnm5-wnLhRiMm7LYTCn9Bk1ivnjLJL4a-DKzGDZWHwFLNXq3mqpWAm')">
+<!-- Abstract graph shapes overlay -->
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/80 to-transparent flex items-end p-6">
+<div class="flex items-end gap-2 h-full w-full opacity-60">
+<div class="w-1/6 bg-primary h-1/3 rounded-t-sm"></div>
+<div class="w-1/6 bg-primary h-1/2 rounded-t-sm"></div>
+<div class="w-1/6 bg-action-lime h-3/4 rounded-t-sm"></div>
+<div class="w-1/6 bg-primary h-2/3 rounded-t-sm"></div>
+<div class="w-1/6 bg-primary h-1/3 rounded-t-sm"></div>
+<div class="w-1/6 bg-action-lime h-full rounded-t-sm"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- The Ecosystem Diagram -->
+<section class="py-32 bg-primary text-on-primary">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="text-center mb-20">
+<h2 class="font-display-lg text-headline-lg-mobile md:text-display-lg font-bold tracking-tight mb-4">The Central Hub</h2>
+<p class="font-body-lg text-body-lg text-on-primary-container max-w-2xl mx-auto">Connecting every stakeholder through a single, unified data layer.</p>
+</div>
+<!-- Abstract Diagram Structure -->
+<div class="relative max-w-4xl mx-auto py-12">
+<!-- Center Hub -->
+<div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-surface-container-lowest/10 backdrop-blur-md rounded-full border border-action-lime/30 flex items-center justify-center z-10 shadow-[0_0_60px_rgba(148,250,51,0.15)]">
+<span class="font-headline-lg text-headline-lg font-bold text-action-lime tracking-tight">Foodify</span>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-2 gap-y-32 gap-x-16 md:gap-x-64 relative z-20">
+<!-- Node 1 -->
+<div class="flex flex-col items-center md:items-end text-center md:text-right pr-0 md:pr-12 border-b border-dashed border-outline/30 pb-4 md:border-b-0 md:border-r">
+<span class="material-symbols-outlined text-4xl text-on-primary mb-2">groups</span>
+<h4 class="font-label-md text-label-md text-on-primary mb-1">Employees</h4>
+<p class="font-mono-sm text-mono-sm text-on-primary-container">Mobile App &amp; Wallet</p>
+</div>
+<!-- Node 2 -->
+<div class="flex flex-col items-center md:items-start text-center md:text-left pl-0 md:pl-12 border-b border-dashed border-outline/30 pb-4 md:border-b-0">
+<span class="material-symbols-outlined text-4xl text-on-primary mb-2">store</span>
+<h4 class="font-label-md text-label-md text-on-primary mb-1">Vendors</h4>
+<p class="font-mono-sm text-mono-sm text-on-primary-container">POS &amp; Kitchen Display</p>
+</div>
+<!-- Node 3 -->
+<div class="flex flex-col items-center md:items-end text-center md:text-right pr-0 md:pr-12 md:border-r border-dashed border-outline/30">
+<span class="material-symbols-outlined text-4xl text-on-primary mb-2">admin_panel_settings</span>
+<h4 class="font-label-md text-label-md text-on-primary mb-1">HR &amp; Admins</h4>
+<p class="font-mono-sm text-mono-sm text-on-primary-container">Analytics Dashboard</p>
+</div>
+<!-- Node 4 -->
+<div class="flex flex-col items-center md:items-start text-center md:text-left pl-0 md:pl-12">
+<span class="material-symbols-outlined text-4xl text-on-primary mb-2">inventory_2</span>
+<h4 class="font-label-md text-label-md text-on-primary mb-1">Cafeteria Staff</h4>
+<p class="font-mono-sm text-mono-sm text-on-primary-container">Inventory &amp; Routing</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="py-32 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto text-center">
+<h2 class="font-display-xl text-headline-lg-mobile md:text-display-xl font-bold tracking-tight text-primary mb-6">Ready to modernize?</h2>
+<p class="font-body-lg text-body-lg text-secondary max-w-xl mx-auto mb-10">Deploy Foodify Dining OS across your enterprise in under 30 days.</p>
+<button class="bg-action-lime text-tertiary-container font-label-md text-label-md px-10 py-5 rounded-full hover:bg-tertiary-fixed transition-colors active:scale-95 duration-200 shadow-sm font-semibold">
+                Start Your Transformation
+            </button>
+</section>
+</main>
+<!-- Site Footer (Shared) -->
+<footer class="bg-forest-deep w-full pt-16 pb-8 md:pt-24 border-t border-secondary/20">
+<div class="flex flex-col md:flex-row justify-between items-start px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto gap-12">
+<div class="md:max-w-xs">
+<a href="Index.html"><span class="font-display-lg text-headline-lg text-action-lime mb-4 block font-bold tracking-tighter">Foodify</span></a>
+<p class="font-body-md text-body-md text-cream-soft mb-8">Intelligence meets Food. Elevating the modern workplace dining experience.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full border border-secondary/40 flex items-center justify-center text-cream-soft hover:border-action-lime hover:text-action-lime transition-colors" href="Contact.html" aria-label="Contact"><span class="material-symbols-outlined" data-icon="mail">mail</span></a>
+<a class="w-10 h-10 rounded-full border border-secondary/40 flex items-center justify-center text-cream-soft hover:border-action-lime hover:text-action-lime transition-colors" href="About.html" aria-label="About"><span class="material-symbols-outlined" data-icon="info">info</span></a>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 flex-1">
+<div>
+<h4 class="font-label-md text-label-md text-white mb-6 uppercase tracking-wider">Solutions</h4>
+<ul class="space-y-4">
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-action-lime transition-colors" href="CafeteriaManaged.html">Cafeteria Managed</a></li>
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-action-lime transition-colors" href="FoodifyApp.html">Dining OS</a></li>
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-action-lime transition-colors" href="EventGiftingService.html">Events &amp; Gifting</a></li>
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-action-lime transition-colors" href="PantryService.html">Pantry Services</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-white mb-6 uppercase tracking-wider">Sectors</h4>
+<ul class="space-y-4">
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-action-lime transition-colors" href="CoporateSector.html">Corporate</a></li>
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-action-lime transition-colors" href="EducationSector.html">Education</a></li>
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-action-lime transition-colors" href="HealthcareSector.html">Healthcare</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-white mb-6 uppercase tracking-wider">Company</h4>
+<ul class="space-y-4">
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-action-lime transition-colors" href="About.html">About</a></li>
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-action-lime transition-colors" href="CaseStudies.html">Case Studies</a></li>
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-action-lime transition-colors" href="Contact.html">Contact</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-white mb-6 uppercase tracking-wider">Legal</h4>
+<ul class="space-y-4">
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-action-lime transition-colors" href="PrivacyPolicy.html">Privacy Policy</a></li>
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-action-lime transition-colors" href="TermsOfService.html">Terms of Service</a></li>
+<li><a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-action-lime transition-colors" href="Sustainability.html">Sustainability</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="mt-16 md:mt-24 pt-8 border-t border-secondary/20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto text-center md:text-left">
+<p class="font-body-md text-body-md text-secondary-fixed-dim">© 2025 Foodify Culinary Solutions. Intelligence meets Food.</p>
+</div>
+</footer>
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const toggle = document.getElementById('menu-toggle');
+            const menu = document.getElementById('mobile-menu');
+            if (toggle && menu) {
+                toggle.addEventListener('click', () => menu.classList.toggle('hidden'));
+            }
+        });
+    </script>
+</body></html>
