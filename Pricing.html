@@ -159,12 +159,12 @@
 <span class="w-2 h-2 rounded-full bg-action-lime"></span>
 <span class="font-mono-sm text-mono-sm text-secondary uppercase tracking-widest">Pricing</span>
 </span>
-<h1 class="font-display-xl text-display-lg md:text-display-xl text-primary mb-6 tracking-tight leading-tight">Simple pricing for modern dining operations.</h1>
-<p class="font-body-lg text-body-lg text-secondary max-w-2xl mx-auto mb-10">Transparent plans for the Foodify Dining OS — deploy across your enterprise in under 30 days.</p>
+<h1 class="font-display-xl text-display-lg md:text-display-xl text-primary mb-6 tracking-tight leading-tight" data-cms="heroHeading">Simple pricing for modern dining operations.</h1>
+<p class="font-body-lg text-body-lg text-secondary max-w-2xl mx-auto mb-10" data-cms="heroSubheading">Transparent plans for the Foodify Dining OS — deploy across your enterprise in under 30 days.</p>
 </section>
 <!-- Pricing Cards -->
 <section class="pb-24 md:pb-32 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8" data-cms-list="plans">
 <!-- Starter -->
 <div class="bg-white rounded-2xl border border-slate-muted p-8 card-hover flex flex-col">
 <span class="font-label-md text-label-md text-secondary uppercase tracking-widest mb-4">Starter</span>
@@ -216,16 +216,16 @@
 </div>
 </div>
 <!-- Note -->
-<p class="font-body-md text-body-md text-secondary text-center mt-12">All plans include the mobile app for employees, digital payments, and access to the Foodify ecosystem. No hidden fees.</p>
+<p class="font-body-md text-body-md text-secondary text-center mt-12" data-cms="plansNote">All plans include the mobile app for employees, digital payments, and access to the Foodify ecosystem. No hidden fees.</p>
 </section>
 <!-- FAQ Section -->
 <section class="py-24 bg-surface-container-low">
 <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
 <div class="mb-16 text-center max-w-4xl mx-auto">
 <span class="text-secondary font-label-md text-label-md uppercase tracking-widest mb-4 block">FAQ</span>
-<h2 class="font-display-lg text-headline-lg-mobile md:text-display-lg text-primary">Frequently asked questions.</h2>
+<h2 class="font-display-lg text-headline-lg-mobile md:text-display-lg text-primary" data-cms="faqHeading">Frequently asked questions.</h2>
 </div>
-<div class="max-w-3xl mx-auto space-y-6">
+<div class="max-w-3xl mx-auto space-y-6" data-cms-list="faqs">
 <div class="bg-white p-8 rounded-2xl border border-slate-muted">
 <h3 class="font-headline-lg text-[20px] font-semibold text-primary mb-3">How fast can we deploy?</h3>
 <p class="font-body-md text-body-md text-secondary">Most deployments go live in under 30 days, including app rollout, POS integration, and staff onboarding.</p>
@@ -247,7 +247,7 @@
 <div class="flex flex-col md:flex-row justify-between items-start px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto gap-12">
 <div class="md:max-w-xs">
 <a href="Index.html"><span class="font-display-lg text-headline-lg text-action-lime mb-4 block font-bold tracking-tighter">Foodify</span></a>
-<p class="font-body-md text-body-md text-cream-soft mb-8">Intelligence meets Food. Elevating the modern workplace dining experience.</p>
+<p class="font-body-md text-body-md text-cream-soft mb-8" data-cms-footer="footerDescription">Intelligence meets Food. Elevating the modern workplace dining experience.</p>
 <div class="flex gap-4">
 <a class="w-10 h-10 rounded-full border border-secondary/40 flex items-center justify-center text-cream-soft hover:border-action-lime hover:text-action-lime transition-colors" href="Contact.html" aria-label="Contact"><span class="material-symbols-outlined" data-icon="mail">mail</span></a>
 <a class="w-10 h-10 rounded-full border border-secondary/40 flex items-center justify-center text-cream-soft hover:border-action-lime hover:text-action-lime transition-colors" href="About.html" aria-label="About"><span class="material-symbols-outlined" data-icon="info">info</span></a>
@@ -290,7 +290,7 @@
 </div>
 </div>
 <div class="mt-16 md:mt-24 pt-8 border-t border-secondary/20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto text-center md:text-left">
-<p class="font-body-md text-body-md text-secondary-fixed-dim">© 2025 Foodify Culinary Solutions. Intelligence meets Food.</p>
+<p class="font-body-md text-body-md text-secondary-fixed-dim" data-cms-footer="copyrightText">© 2025 Foodify Culinary Solutions. Intelligence meets Food.</p>
 </div>
 </footer>
 <script>
@@ -302,4 +302,5 @@
             }
         });
     </script>
+<script type="module" src="js/content-loader.js" data-page="pricingPage"></script>
 </body></html>
